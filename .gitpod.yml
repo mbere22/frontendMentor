@@ -1,3 +1,3 @@
 tasks:
   - init: npm i -g elm elm-format elm-live
-    command: elm-live -v src/Main.elm
+    command: elm init && elm-live -v src/Main.elm

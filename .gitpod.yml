@@ -1,2 +1,3 @@
 tasks:
   - init: npm i -g elm elm-format elm-live && elm install mdgriffith/elm-ui
+    command: elm-live src/Main.elm

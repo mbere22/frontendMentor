@@ -10182,27 +10182,15 @@ var $mdgriffith$elm_ui$Element$el = F2(
 var $mdgriffith$elm_ui$Internal$Model$Fill = function (a) {
 	return {$: 'Fill', a: a};
 };
-var $mdgriffith$elm_ui$Element$fillPortion = $mdgriffith$elm_ui$Internal$Model$Fill;
-var $author$project$View$h = $mdgriffith$elm_ui$Element$height;
-var $author$project$View$fph = function (a) {
-	return $author$project$View$h(
-		$mdgriffith$elm_ui$Element$fillPortion(a));
-};
+var $mdgriffith$elm_ui$Element$fill = $mdgriffith$elm_ui$Internal$Model$Fill(1);
+var $author$project$View$w = $mdgriffith$elm_ui$Element$width;
+var $author$project$View$fw = $author$project$View$w($mdgriffith$elm_ui$Element$fill);
 var $mdgriffith$elm_ui$Internal$Model$Text = function (a) {
 	return {$: 'Text', a: a};
 };
 var $mdgriffith$elm_ui$Element$text = function (content) {
 	return $mdgriffith$elm_ui$Internal$Model$Text(content);
 };
-var $author$project$View$adro = A2(
-	$mdgriffith$elm_ui$Element$el,
-	_List_fromArray(
-		[
-			$author$project$View$fph(1)
-		]),
-	$mdgriffith$elm_ui$Element$text('adro a'));
-var $mdgriffith$elm_ui$Internal$Model$AsColumn = {$: 'AsColumn'};
-var $mdgriffith$elm_ui$Internal$Model$asColumn = $mdgriffith$elm_ui$Internal$Model$AsColumn;
 var $mdgriffith$elm_ui$Internal$Model$Attr = function (a) {
 	return {$: 'Attr', a: a};
 };
@@ -10210,24 +10198,6 @@ var $mdgriffith$elm_ui$Internal$Model$htmlClass = function (cls) {
 	return $mdgriffith$elm_ui$Internal$Model$Attr(
 		$elm$html$Html$Attributes$class(cls));
 };
-var $mdgriffith$elm_ui$Element$column = F2(
-	function (attrs, children) {
-		return A4(
-			$mdgriffith$elm_ui$Internal$Model$element,
-			$mdgriffith$elm_ui$Internal$Model$asColumn,
-			$mdgriffith$elm_ui$Internal$Model$div,
-			A2(
-				$elm$core$List$cons,
-				$mdgriffith$elm_ui$Internal$Model$htmlClass($mdgriffith$elm_ui$Internal$Style$classes.contentTop + (' ' + $mdgriffith$elm_ui$Internal$Style$classes.contentLeft)),
-				A2(
-					$elm$core$List$cons,
-					$mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$shrink),
-					A2(
-						$elm$core$List$cons,
-						$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$shrink),
-						attrs))),
-			$mdgriffith$elm_ui$Internal$Model$Unkeyed(children));
-	});
 var $mdgriffith$elm_ui$Element$explain = function (_v0) {
 	return $mdgriffith$elm_ui$Internal$Model$htmlClass('explain');
 };
@@ -10239,39 +10209,17 @@ var $author$project$View$x = $mdgriffith$elm_ui$Element$explain(
 			start: {line: 5, column: 15},
 			end: {line: 5, column: 25}
 		}));
-var $author$project$View$dosa = A2(
+var $author$project$View$adroa = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
-		[
-			$author$project$View$x,
-			$author$project$View$fph(5)
-		]),
-	$mdgriffith$elm_ui$Element$text('dos a'));
-var $author$project$View$dosb = A2(
-	$mdgriffith$elm_ui$Element$el,
-	_List_fromArray(
-		[
-			$author$project$View$x,
-			$author$project$View$fph(5)
-		]),
-	$mdgriffith$elm_ui$Element$text('dos b'));
-var $author$project$View$w = $mdgriffith$elm_ui$Element$width;
-var $author$project$View$fpw = function (a) {
-	return $author$project$View$w(
+		[$author$project$View$x, $author$project$View$fw]),
+	$mdgriffith$elm_ui$Element$text('adro'));
+var $mdgriffith$elm_ui$Element$fillPortion = $mdgriffith$elm_ui$Internal$Model$Fill;
+var $author$project$View$h = $mdgriffith$elm_ui$Element$height;
+var $author$project$View$fph = function (a) {
+	return $author$project$View$h(
 		$mdgriffith$elm_ui$Element$fillPortion(a));
 };
-var $author$project$View$dos = A2(
-	$mdgriffith$elm_ui$Element$column,
-	_List_fromArray(
-		[
-			$author$project$View$fpw(1),
-			$author$project$View$fph(7)
-		]),
-	_List_fromArray(
-		[$author$project$View$dosa, $author$project$View$dosb]));
-var $mdgriffith$elm_ui$Element$fill = $mdgriffith$elm_ui$Internal$Model$Fill(1);
-var $author$project$View$fh = $author$project$View$h($mdgriffith$elm_ui$Element$fill);
-var $author$project$View$fw = $author$project$View$w($mdgriffith$elm_ui$Element$fill);
 var $mdgriffith$elm_ui$Internal$Model$AsRow = {$: 'AsRow'};
 var $mdgriffith$elm_ui$Internal$Model$asRow = $mdgriffith$elm_ui$Internal$Model$AsRow;
 var $mdgriffith$elm_ui$Element$row = F2(
@@ -10292,57 +10240,126 @@ var $mdgriffith$elm_ui$Element$row = F2(
 						attrs))),
 			$mdgriffith$elm_ui$Internal$Model$Unkeyed(children));
 	});
-var $author$project$View$tresa = A2(
+var $author$project$View$adro = A2(
+	$mdgriffith$elm_ui$Element$row,
+	_List_fromArray(
+		[
+			$author$project$View$fw,
+			$author$project$View$fph(2)
+		]),
+	_List_fromArray(
+		[$author$project$View$adroa]));
+var $mdgriffith$elm_ui$Internal$Model$AsColumn = {$: 'AsColumn'};
+var $mdgriffith$elm_ui$Internal$Model$asColumn = $mdgriffith$elm_ui$Internal$Model$AsColumn;
+var $mdgriffith$elm_ui$Element$column = F2(
+	function (attrs, children) {
+		return A4(
+			$mdgriffith$elm_ui$Internal$Model$element,
+			$mdgriffith$elm_ui$Internal$Model$asColumn,
+			$mdgriffith$elm_ui$Internal$Model$div,
+			A2(
+				$elm$core$List$cons,
+				$mdgriffith$elm_ui$Internal$Model$htmlClass($mdgriffith$elm_ui$Internal$Style$classes.contentTop + (' ' + $mdgriffith$elm_ui$Internal$Style$classes.contentLeft)),
+				A2(
+					$elm$core$List$cons,
+					$mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$shrink),
+					A2(
+						$elm$core$List$cons,
+						$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$shrink),
+						attrs))),
+			$mdgriffith$elm_ui$Internal$Model$Unkeyed(children));
+	});
+var $author$project$View$dosa = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
 		[
-			$author$project$View$fpw(5)
+			$author$project$View$x,
+			$author$project$View$fph(3),
+			$author$project$View$fw
 		]),
+	$mdgriffith$elm_ui$Element$text('dos a'));
+var $author$project$View$dosb = A2(
+	$mdgriffith$elm_ui$Element$el,
+	_List_fromArray(
+		[
+			$author$project$View$x,
+			$author$project$View$fph(7),
+			$author$project$View$fw
+		]),
+	$mdgriffith$elm_ui$Element$text('dos b'));
+var $author$project$View$dos = A2(
+	$mdgriffith$elm_ui$Element$column,
+	_List_fromArray(
+		[
+			$author$project$View$fw,
+			$author$project$View$fph(4)
+		]),
+	_List_fromArray(
+		[$author$project$View$dosa, $author$project$View$dosb]));
+var $author$project$View$fh = $author$project$View$h($mdgriffith$elm_ui$Element$fill);
+var $author$project$View$tresa = A2(
+	$mdgriffith$elm_ui$Element$el,
+	_List_fromArray(
+		[$author$project$View$x, $author$project$View$fw]),
 	$mdgriffith$elm_ui$Element$text('tresa'));
 var $author$project$View$tresb = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
-		[
-			$author$project$View$fpw(5)
-		]),
+		[$author$project$View$x, $author$project$View$fw]),
 	$mdgriffith$elm_ui$Element$text('tresb'));
 var $author$project$View$tresc = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
-		[
-			$author$project$View$fpw(5)
-		]),
+		[$author$project$View$x, $author$project$View$fw]),
 	$mdgriffith$elm_ui$Element$text('tresc'));
 var $author$project$View$tresd = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
-		[
-			$author$project$View$fpw(5)
-		]),
+		[$author$project$View$x, $author$project$View$fw]),
 	$mdgriffith$elm_ui$Element$text('tresd'));
 var $author$project$View$trese = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
-		[
-			$author$project$View$fpw(5)
-		]),
+		[$author$project$View$x, $author$project$View$fw]),
 	$mdgriffith$elm_ui$Element$text('trese'));
 var $author$project$View$tres = A2(
 	$mdgriffith$elm_ui$Element$row,
 	_List_fromArray(
 		[
-			$author$project$View$x,
-			$author$project$View$fph(1)
+			$author$project$View$fw,
+			$author$project$View$fph(2)
 		]),
 	_List_fromArray(
 		[$author$project$View$tresa, $author$project$View$tresb, $author$project$View$tresc, $author$project$View$tresd, $author$project$View$trese]));
-var $author$project$View$uno = A2(
+var $author$project$View$fpw = function (a) {
+	return $author$project$View$w(
+		$mdgriffith$elm_ui$Element$fillPortion(a));
+};
+var $author$project$View$unoa = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
 		[
-			$author$project$View$fph(1)
+			$author$project$View$x,
+			$author$project$View$fpw(1)
 		]),
 	$mdgriffith$elm_ui$Element$text('Uno'));
+var $author$project$View$unob = A2(
+	$mdgriffith$elm_ui$Element$el,
+	_List_fromArray(
+		[
+			$author$project$View$x,
+			$author$project$View$fpw(9)
+		]),
+	$mdgriffith$elm_ui$Element$text('Uno'));
+var $author$project$View$uno = A2(
+	$mdgriffith$elm_ui$Element$row,
+	_List_fromArray(
+		[
+			$author$project$View$fw,
+			$author$project$View$fph(2)
+		]),
+	_List_fromArray(
+		[$author$project$View$unoa, $author$project$View$unob]));
 var $author$project$View$body = A2(
 	$mdgriffith$elm_ui$Element$column,
 	_List_fromArray(

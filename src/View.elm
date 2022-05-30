@@ -1,5 +1,6 @@
 module View exposing (view)
 
+import Html as H
 import Element as E
 import Element.Background as EB
 import Element.Font as EF
@@ -47,7 +48,13 @@ unoa = E.el [x, fpw 1, rgb ca] (E.text "Uno")
 unob = E.el [x, fpw 9] (E.text "Uno")
 
 dosa= E.el [x, fph 3, fw] (E.text "How did we do?")
-dosb = E.el [x, fph 7, fw] (E.text "Please let us know how we did with you r support request. Sll feddback is appreciated to help us improve offering!")
+dosb = E.paragraph [x, fph 7, fw]
+        [ E.text "Please let us know how we did with your"
+        , E.html <| H.br [] []
+        , E.text "support request. Sll feddback is appreciated"
+        , E.html <| H.br [] []
+        , E.text "to help us improve offering!"
+        ]
 
 tresa = E.el [x, fw] (E.text "tresa")
 tresb = E.el [x, fw] (E.text "tresb")

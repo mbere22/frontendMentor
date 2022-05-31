@@ -64,10 +64,25 @@ tresa = E.el [x, fw, fh, rgb cc, EF.color cb
     , EF.size 18
     , EF.family[EF.external { name = "Overpass", url = "https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"}
     , EF.sansSerif] ] (E.text "1")
-tresb = E.el [x, fw, fh, rgb cc](E.text "2")
-tresc = E.el [x, fw, fh, rgb cc](E.text "3")
-tresd = E.el [x, fw, fh, rgb cc](E.text "4")
-trese = E.el [x, fw, fh, rgb cc](E.text "5")
+tresb = E.el [x, fw, fh, rgb cc, EF.color cb
+    , EF.size 18
+    , EF.family[EF.external { name = "Overpass", url = "https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"}
+    , EF.sansSerif]](E.text "2")
+tresc = E.el [x, fw, fh, rgb cc, EF.color cb
+    , EF.size 18
+    , EF.family[EF.external { name = "Overpass", url = "https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"}
+    , EF.sansSerif]](E.text "3")
+tresd = E.el [x, fw, fh, rgb cc, EF.color cb
+    , EF.size 18
+    , EF.family[EF.external { name = "Overpass", url = "https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"}
+    , EF.sansSerif]](E.text "4")
+trese = E.el [x, fw, fh, rgb cc, EF.color cb
+    , EF.size 18
+    , EF.family[EF.external { name = "Overpass", url = "https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"}
+    , EF.sansSerif]](E.text "5")
 
 
-adroa = E.el [x, fw, fh, rgb ca] E.none --(E.text "Submit") 
+adroa = E.el [x, fw, fh, rgb ca, EF.color cg
+    , EF.size 18
+    , EF.family[EF.external { name = "Overpass", url = "https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"}
+    , EF.sansSerif]] (E.text "Submit") 

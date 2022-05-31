@@ -44,23 +44,23 @@ dos = E.column [fw, fph 4] [dosa, dosb]
 tres = E.row [fw, fph 2] [tresa, tresb, tresc, tresd, trese]
 adro = E.row [fw, fph 2] [adroa]
 
-unoa = E.el [x, fpw 1, rgb ca] (E.text "Uno") 
-unob = E.el [x, fpw 9] (E.text "Uno")
+unoa = E.el [x, fh, fpw 1, rgb ca] E.none 
+unob = E.el [x, fh, fpw 9] E.none
 
-dosa= E.el [x, fph 3, fw] (E.text "How did we do?")
-dosb = E.paragraph [x, fph 7, fw]
-        [ E.text "Please let us know how we did with your"
-        , E.html <| H.br [] []
-        , E.text "support request. Sll feddback is appreciated"
-        , E.html <| H.br [] []
-        , E.text "to help us improve offering!"
-        ]
+dosa= E.el [x, fph 3, fw] E.none --(E.text "How did we do?")
+dosb = E.paragraph [x, fph 7, fw] [E.none]
+       -- [E.text "Please let us know how we did with your"
+        --, E.html <| H.br [] []
+        --, E.text "support request. Sll feddback is appreciated"
+        --, E.html <| H.br [] []
+        --, E.text "to help us improve offering!"
+       -- ]
 
-tresa = E.el [x, fw] (E.text "tresa")
-tresb = E.el [x, fw] (E.text "tresb")
-tresc = E.el [x, fw] (E.text "tresc")
-tresd = E.el [x, fw] (E.text "tresd")
-trese = E.el [x, fw] (E.text "trese")
+tresa = E.el [x, fw] E.none --(E.text "1")
+tresb = E.el [x, fw] E.none --(E.text "2")
+tresc = E.el [x, fw] E.none --(E.text "3")
+tresd = E.el [x, fw] E.none --(E.text "4")
+trese = E.el [x, fw] E.none --(E.text "5")
 
 
-adroa = E.el [x, fw] (E.text "adro") 
+adroa = E.el [x, fw] E.none --(E.text "Submit") 

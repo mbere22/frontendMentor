@@ -10185,12 +10185,8 @@ var $mdgriffith$elm_ui$Internal$Model$Fill = function (a) {
 var $mdgriffith$elm_ui$Element$fill = $mdgriffith$elm_ui$Internal$Model$Fill(1);
 var $author$project$View$w = $mdgriffith$elm_ui$Element$width;
 var $author$project$View$fw = $author$project$View$w($mdgriffith$elm_ui$Element$fill);
-var $mdgriffith$elm_ui$Internal$Model$Text = function (a) {
-	return {$: 'Text', a: a};
-};
-var $mdgriffith$elm_ui$Element$text = function (content) {
-	return $mdgriffith$elm_ui$Internal$Model$Text(content);
-};
+var $mdgriffith$elm_ui$Internal$Model$Empty = {$: 'Empty'};
+var $mdgriffith$elm_ui$Element$none = $mdgriffith$elm_ui$Internal$Model$Empty;
 var $mdgriffith$elm_ui$Internal$Model$Attr = function (a) {
 	return {$: 'Attr', a: a};
 };
@@ -10213,7 +10209,7 @@ var $author$project$View$adroa = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
 		[$author$project$View$x, $author$project$View$fw]),
-	$mdgriffith$elm_ui$Element$text('adro'));
+	$mdgriffith$elm_ui$Element$none);
 var $mdgriffith$elm_ui$Element$fillPortion = $mdgriffith$elm_ui$Internal$Model$Fill;
 var $author$project$View$h = $mdgriffith$elm_ui$Element$height;
 var $author$project$View$fph = function (a) {
@@ -10277,19 +10273,7 @@ var $author$project$View$dosa = A2(
 			$author$project$View$fph(3),
 			$author$project$View$fw
 		]),
-	$mdgriffith$elm_ui$Element$text('How did we do?'));
-var $elm$html$Html$br = _VirtualDom_node('br');
-var $elm$core$Basics$always = F2(
-	function (a, _v0) {
-		return a;
-	});
-var $elm$core$Basics$composeL = F3(
-	function (g, f, x) {
-		return g(
-			f(x));
-	});
-var $mdgriffith$elm_ui$Internal$Model$unstyled = A2($elm$core$Basics$composeL, $mdgriffith$elm_ui$Internal$Model$Unstyled, $elm$core$Basics$always);
-var $mdgriffith$elm_ui$Element$html = $mdgriffith$elm_ui$Internal$Model$unstyled;
+	$mdgriffith$elm_ui$Element$none);
 var $mdgriffith$elm_ui$Internal$Model$Describe = function (a) {
 	return {$: 'Describe', a: a};
 };
@@ -10344,15 +10328,7 @@ var $author$project$View$dosb = A2(
 			$author$project$View$fw
 		]),
 	_List_fromArray(
-		[
-			$mdgriffith$elm_ui$Element$text('Please let us know how we did with your'),
-			$mdgriffith$elm_ui$Element$html(
-			A2($elm$html$Html$br, _List_Nil, _List_Nil)),
-			$mdgriffith$elm_ui$Element$text('support request. Sll feddback is appreciated'),
-			$mdgriffith$elm_ui$Element$html(
-			A2($elm$html$Html$br, _List_Nil, _List_Nil)),
-			$mdgriffith$elm_ui$Element$text('to help us improve offering!')
-		]));
+		[$mdgriffith$elm_ui$Element$none]));
 var $author$project$View$dos = A2(
 	$mdgriffith$elm_ui$Element$column,
 	_List_fromArray(
@@ -10367,27 +10343,27 @@ var $author$project$View$tresa = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
 		[$author$project$View$x, $author$project$View$fw]),
-	$mdgriffith$elm_ui$Element$text('tresa'));
+	$mdgriffith$elm_ui$Element$none);
 var $author$project$View$tresb = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
 		[$author$project$View$x, $author$project$View$fw]),
-	$mdgriffith$elm_ui$Element$text('tresb'));
+	$mdgriffith$elm_ui$Element$none);
 var $author$project$View$tresc = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
 		[$author$project$View$x, $author$project$View$fw]),
-	$mdgriffith$elm_ui$Element$text('tresc'));
+	$mdgriffith$elm_ui$Element$none);
 var $author$project$View$tresd = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
 		[$author$project$View$x, $author$project$View$fw]),
-	$mdgriffith$elm_ui$Element$text('tresd'));
+	$mdgriffith$elm_ui$Element$none);
 var $author$project$View$trese = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
 		[$author$project$View$x, $author$project$View$fw]),
-	$mdgriffith$elm_ui$Element$text('trese'));
+	$mdgriffith$elm_ui$Element$none);
 var $author$project$View$tres = A2(
 	$mdgriffith$elm_ui$Element$row,
 	_List_fromArray(
@@ -10440,18 +10416,20 @@ var $author$project$View$unoa = A2(
 	_List_fromArray(
 		[
 			$author$project$View$x,
+			$author$project$View$fh,
 			$author$project$View$fpw(1),
 			$author$project$View$rgb($author$project$View$ca)
 		]),
-	$mdgriffith$elm_ui$Element$text('Uno'));
+	$mdgriffith$elm_ui$Element$none);
 var $author$project$View$unob = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
 		[
 			$author$project$View$x,
+			$author$project$View$fh,
 			$author$project$View$fpw(9)
 		]),
-	$mdgriffith$elm_ui$Element$text('Uno'));
+	$mdgriffith$elm_ui$Element$none);
 var $author$project$View$uno = A2(
 	$mdgriffith$elm_ui$Element$row,
 	_List_fromArray(

@@ -23,9 +23,11 @@ vl = {angle = pi, steps = [vd, ve]} --view background gradient color
 vm = fb 255 255 255
 vn = E.centerX
 vo = E.centerY
---vp = 
---vq = 
+vp = E.html <| I.a
+vq = E.clip 
 vr = E.fill
+vs = E.html <| I.b
+vt = E.html <| I.c 
 
 --FUNCTIONS
 fa = \a -> Eb.color a  --set color to background
@@ -37,13 +39,18 @@ fe = \a -> E.height a
 ff = \a -> E.width a
 fg = \a -> E.px a --Length size in pixels
 fh = \a -> Ebr.rounded a
+fi = \a -> E.moveLeft a
+fj = \a -> E.moveUp a
+fk = \a -> E.above a
 
 view = E.layout [fc vl] body
 body = E.column [fa vm, vn, vo, fe <| fg 450, ff <| fg 950, fh 24] [uno]
 uno = E.row [ff vr, fe vr] [unoa, unob] 
-unoa = E.column [ff vr, fe vr][unoaa] 
+unoa = E.column [ff vr, fe vr, x, E.inFront unoab, E.inFront unoac][unoaa] 
 unob = E.column [ff vr, fe vr][E.none]
-unoaa = E.html <| I.a
+unoaa = E.el [ff vr, fe vr] vp
+unoab = E.el [ff vr, fe vr] vs
+unoac = E.el [ff vr, fe vr] vt 
 
 {-body = E.column [fe vr, ff vr] [uno, dos, tres]
 dos = E.row [fe vr, ff vr, fe <|fd 4] [dosa, dosb, dosc]

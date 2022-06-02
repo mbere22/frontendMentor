@@ -1,3 +1,4 @@
 module Main exposing (main)
 import View as V
-main = V.view
+import Element as E
+main = E.none --V.view

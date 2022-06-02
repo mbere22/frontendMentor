@@ -3,8 +3,9 @@ module View exposing (view)
 import Element as E
 import Element.Background as Eb
 import Element.Border as Ebr
-import Html as H
-import Html.Attributes as Ha
+import Svg as S 
+import Svg.Attributes as Sa 
+import Icon as I
 
 --VALUES
 va = fb 231 231 233
@@ -40,7 +41,7 @@ fh = \a -> Ebr.rounded a
 view = E.layout [fc vl] body
 body = E.column [fa vm, vn, vo, fe <| fg 450, ff <| fg 950, fh 24] [uno]
 uno = E.row [ff vr, fe vr] [unoa, unob] 
-unoa = E.column [ff vr, fe vr][E.image [x,fe <| fg 275, vo] {src="./wdsk.svg", description="image of a woman online"}]
+unoa = E.column [ff vr, fe vr][E.html <| I.a ] --[E.image [x,fe <| fg 275, vo] {src="./wdsk.svg", description="image of a woman online"}]
 unob = E.column [ff vr, fe vr][E.none]
 
 {-body = E.column [fe vr, ff vr] [uno, dos, tres]

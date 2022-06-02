@@ -10255,6 +10255,9 @@ var $mdgriffith$elm_ui$Element$Background$color = function (clr) {
 var $author$project$View$fa = function (a) {
 	return $mdgriffith$elm_ui$Element$Background$color(a);
 };
+var $author$project$View$fe = function (a) {
+	return $mdgriffith$elm_ui$Element$height(a);
+};
 var $mdgriffith$elm_ui$Internal$Model$AsRow = {$: 'AsRow'};
 var $mdgriffith$elm_ui$Internal$Model$asRow = $mdgriffith$elm_ui$Internal$Model$AsRow;
 var $mdgriffith$elm_ui$Element$row = F2(
@@ -10305,27 +10308,18 @@ var $mdgriffith$elm_ui$Internal$Model$AlignY = function (a) {
 var $mdgriffith$elm_ui$Internal$Model$CenterY = {$: 'CenterY'};
 var $mdgriffith$elm_ui$Element$centerY = $mdgriffith$elm_ui$Internal$Model$AlignY($mdgriffith$elm_ui$Internal$Model$CenterY);
 var $author$project$View$vo = $mdgriffith$elm_ui$Element$centerY;
-var $mdgriffith$elm_ui$Element$explain = function (_v0) {
-	return $mdgriffith$elm_ui$Internal$Model$htmlClass('explain');
-};
-var $elm$core$Debug$todo = _Debug_todo;
-var $author$project$View$x = $mdgriffith$elm_ui$Element$explain(
-	_Debug_todo(
-		'View',
-		{
-			start: {line: 30, column: 15},
-			end: {line: 30, column: 25}
-		}));
+var $mdgriffith$elm_ui$Element$fill = $mdgriffith$elm_ui$Internal$Model$Fill(1);
+var $author$project$View$vr = $mdgriffith$elm_ui$Element$fill;
 var $author$project$View$dosb = A2(
 	$mdgriffith$elm_ui$Element$row,
 	_List_fromArray(
 		[
-			$author$project$View$x,
 			$author$project$View$fa($author$project$View$vm),
 			$author$project$View$vn,
 			$author$project$View$vo,
 			$author$project$View$ff(
-			$author$project$View$fd(3))
+			$author$project$View$fd(3)),
+			$author$project$View$fe($author$project$View$vr)
 		]),
 	_List_fromArray(
 		[
@@ -10339,15 +10333,11 @@ var $author$project$View$dosc = A2(
 			$author$project$View$fd(1))
 		]),
 	$mdgriffith$elm_ui$Element$none);
-var $author$project$View$fe = function (a) {
-	return $mdgriffith$elm_ui$Element$height(a);
-};
-var $mdgriffith$elm_ui$Element$fill = $mdgriffith$elm_ui$Internal$Model$Fill(1);
-var $author$project$View$vr = $mdgriffith$elm_ui$Element$fill;
 var $author$project$View$dos = A2(
 	$mdgriffith$elm_ui$Element$row,
 	_List_fromArray(
 		[
+			$author$project$View$fe($author$project$View$vr),
 			$author$project$View$ff($author$project$View$vr),
 			$author$project$View$fe(
 			$author$project$View$fd(4))
@@ -10358,6 +10348,7 @@ var $author$project$View$tres = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
 		[
+			$author$project$View$ff($author$project$View$vr),
 			$author$project$View$fe(
 			$author$project$View$fd(1))
 		]),
@@ -10366,6 +10357,7 @@ var $author$project$View$uno = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
 		[
+			$author$project$View$ff($author$project$View$vr),
 			$author$project$View$fe(
 			$author$project$View$fd(1))
 		]),

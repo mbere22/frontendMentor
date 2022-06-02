@@ -41,8 +41,9 @@ fh = \a -> Ebr.rounded a
 view = E.layout [fc vl] body
 body = E.column [fa vm, vn, vo, fe <| fg 450, ff <| fg 950, fh 24] [uno]
 uno = E.row [ff vr, fe vr] [unoa, unob] 
-unoa = E.column [ff vr, fe vr][E.html <| I.a ] --[E.image [x,fe <| fg 275, vo] {src="./wdsk.svg", description="image of a woman online"}]
+unoa = E.column [ff vr, fe vr][unoaa] 
 unob = E.column [ff vr, fe vr][E.none]
+unoaa = E.html <| I.a
 
 {-body = E.column [fe vr, ff vr] [uno, dos, tres]
 dos = E.row [fe vr, ff vr, fe <|fd 4] [dosa, dosb, dosc]

@@ -1,4 +1,4 @@
-module Icon exposing (a, b, c)
+module Icon exposing (a, b, c, d)
 
 import Svg as S
 import Svg.Attributes as Sa
@@ -443,3 +443,18 @@ c =  S.svg
                 []
             ]
         ]    
+
+d =     S.svg
+        [ Sa.width "10"
+        , Sa.height "7"
+        ]
+        [ S.path
+            [ Sa.d "M1 .799l4 4 4-4"
+            , Sa.stroke "#F47B56"
+            , Sa.strokeWidth "2"
+            , Sa.fill "none"
+            , Sa.fillRule "evenodd"
+            ]
+            []
+        ]
+     

@@ -37,6 +37,10 @@ vx = "Can I cancel my subscription?"
 vy = "Do you provide additional support?"
 vz = "FAQ"
 vaa = E.html <| H.hr [] []
+vab = Ef.family [ Ef.external { name = "Kumbh Sans", url = vk }, Ef.sansSerif]
+vac = Ef.bold
+vad = E.html <| I.d
+vae = Ei.button [ff vr, fn 12, ff <| fd 4]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text vu, E.el [ff <|fd 1] vad]}
 
 --FUNCTIONS
 fa = \a -> Eb.color a  --set color to background
@@ -53,14 +57,16 @@ fj = \a -> E.moveUp a
 fk = \a -> E.above a
 fl = \a -> E.text a
 fm = \a -> E.spacing a 
+fn = \a -> Ef.size a
 
 view = E.layout [fc vl] body
 body = E.column [fa vm, vn, vo, fe <| fg 450, ff <| fg 950, fh 24] [uno]
 uno = E.row [ff vr, fe vr] [unoa, unob] 
 unoa = E.column [ff vr, fe vr, E.inFront unoab, E.inFront unoac][unoaa] 
 unob = E.column [ff vr, fe vr][unoba, unobb]
-unoba = E.column [ff vr, fe vr, fe <| fd 1][E.el [Ef.size 30, Ef.bold, vo, Ef.family [ Ef.external { name = "Kumbh Sans", url = vk }, Ef.sansSerif]] <| fl vz] 
-unobb = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [Ei.button [Ef.size 12, Ef.family [ Ef.external { name = "Kumbh Sans", url = vk }, Ef.sansSerif]]{onPress= Nothing, label=E.text vu}, vaa, Ei.button [Ef.size 12, Ef.family [ Ef.external { name = "Kumbh Sans", url = vk }, Ef.sansSerif]]{onPress= Nothing, label=E.text vv}, vaa, fl vw, vaa, fl vx, vaa, fl vy, vaa]
+unoba = E.column [ff vr, fe vr, fe <| fd 1][E.el [fn 30, vo, vab, vac] <| fl vz] 
+unobb = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [ E.row [ff vr][vae, E.el [ff vr, ff <| fd 1] E.none]
+ , vaa, fl vu, vaa, fl vw, vaa, fl vx, vaa, fl vy, vaa]
 unoaa = E.el [ff vr, fe vr] vp
 unoab = E.el [ff vr, fe vr] vs
 unoac = E.el [ff vr, fe vr] vt 

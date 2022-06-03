@@ -11111,12 +11111,32 @@ var $author$project$View$unoa = A2(
 		]),
 	_List_fromArray(
 		[$author$project$View$unoaa]));
-var $mdgriffith$elm_ui$Internal$Model$Class = F2(
-	function (a, b) {
-		return {$: 'Class', a: a, b: b};
-	});
-var $mdgriffith$elm_ui$Internal$Flag$fontWeight = $mdgriffith$elm_ui$Internal$Flag$flag(13);
-var $mdgriffith$elm_ui$Element$Font$bold = A2($mdgriffith$elm_ui$Internal$Model$Class, $mdgriffith$elm_ui$Internal$Flag$fontWeight, $mdgriffith$elm_ui$Internal$Style$classes.bold);
+var $mdgriffith$elm_ui$Element$fillPortion = $mdgriffith$elm_ui$Internal$Model$Fill;
+var $author$project$View$fd = function (a) {
+	return $mdgriffith$elm_ui$Element$fillPortion(a);
+};
+var $mdgriffith$elm_ui$Internal$Model$Text = function (a) {
+	return {$: 'Text', a: a};
+};
+var $mdgriffith$elm_ui$Element$text = function (content) {
+	return $mdgriffith$elm_ui$Internal$Model$Text(content);
+};
+var $author$project$View$fl = function (a) {
+	return $mdgriffith$elm_ui$Element$text(a);
+};
+var $mdgriffith$elm_ui$Internal$Model$FontSize = function (a) {
+	return {$: 'FontSize', a: a};
+};
+var $mdgriffith$elm_ui$Internal$Flag$fontSize = $mdgriffith$elm_ui$Internal$Flag$flag(4);
+var $mdgriffith$elm_ui$Element$Font$size = function (i) {
+	return A2(
+		$mdgriffith$elm_ui$Internal$Model$StyleClass,
+		$mdgriffith$elm_ui$Internal$Flag$fontSize,
+		$mdgriffith$elm_ui$Internal$Model$FontSize(i));
+};
+var $author$project$View$fn = function (a) {
+	return $mdgriffith$elm_ui$Element$Font$size(a);
+};
 var $mdgriffith$elm_ui$Internal$Model$ImportFont = F2(
 	function (a, b) {
 		return {$: 'ImportFont', a: a, b: b};
@@ -11179,32 +11199,23 @@ var $mdgriffith$elm_ui$Element$Font$family = function (families) {
 			A3($elm$core$List$foldl, $mdgriffith$elm_ui$Internal$Model$renderFontClassName, 'ff-', families),
 			families));
 };
-var $mdgriffith$elm_ui$Element$fillPortion = $mdgriffith$elm_ui$Internal$Model$Fill;
-var $author$project$View$fd = function (a) {
-	return $mdgriffith$elm_ui$Element$fillPortion(a);
-};
-var $mdgriffith$elm_ui$Internal$Model$Text = function (a) {
-	return {$: 'Text', a: a};
-};
-var $mdgriffith$elm_ui$Element$text = function (content) {
-	return $mdgriffith$elm_ui$Internal$Model$Text(content);
-};
-var $author$project$View$fl = function (a) {
-	return $mdgriffith$elm_ui$Element$text(a);
-};
 var $mdgriffith$elm_ui$Internal$Model$SansSerif = {$: 'SansSerif'};
 var $mdgriffith$elm_ui$Element$Font$sansSerif = $mdgriffith$elm_ui$Internal$Model$SansSerif;
-var $mdgriffith$elm_ui$Internal$Model$FontSize = function (a) {
-	return {$: 'FontSize', a: a};
-};
-var $mdgriffith$elm_ui$Internal$Flag$fontSize = $mdgriffith$elm_ui$Internal$Flag$flag(4);
-var $mdgriffith$elm_ui$Element$Font$size = function (i) {
-	return A2(
-		$mdgriffith$elm_ui$Internal$Model$StyleClass,
-		$mdgriffith$elm_ui$Internal$Flag$fontSize,
-		$mdgriffith$elm_ui$Internal$Model$FontSize(i));
-};
 var $author$project$View$vk = 'https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap';
+var $author$project$View$vab = $mdgriffith$elm_ui$Element$Font$family(
+	_List_fromArray(
+		[
+			$mdgriffith$elm_ui$Element$Font$external(
+			{name: 'Kumbh Sans', url: $author$project$View$vk}),
+			$mdgriffith$elm_ui$Element$Font$sansSerif
+		]));
+var $mdgriffith$elm_ui$Internal$Model$Class = F2(
+	function (a, b) {
+		return {$: 'Class', a: a, b: b};
+	});
+var $mdgriffith$elm_ui$Internal$Flag$fontWeight = $mdgriffith$elm_ui$Internal$Flag$flag(13);
+var $mdgriffith$elm_ui$Element$Font$bold = A2($mdgriffith$elm_ui$Internal$Model$Class, $mdgriffith$elm_ui$Internal$Flag$fontWeight, $mdgriffith$elm_ui$Internal$Style$classes.bold);
+var $author$project$View$vac = $mdgriffith$elm_ui$Element$Font$bold;
 var $mdgriffith$elm_ui$Internal$Model$AlignY = function (a) {
 	return {$: 'AlignY', a: a};
 };
@@ -11227,19 +11238,40 @@ var $author$project$View$unoba = A2(
 			$mdgriffith$elm_ui$Element$el,
 			_List_fromArray(
 				[
-					$mdgriffith$elm_ui$Element$Font$size(30),
-					$mdgriffith$elm_ui$Element$Font$bold,
+					$author$project$View$fn(30),
 					$author$project$View$vo,
-					$mdgriffith$elm_ui$Element$Font$family(
-					_List_fromArray(
-						[
-							$mdgriffith$elm_ui$Element$Font$external(
-							{name: 'Kumbh Sans', url: $author$project$View$vk}),
-							$mdgriffith$elm_ui$Element$Font$sansSerif
-						]))
+					$author$project$View$vab,
+					$author$project$View$vac
 				]),
 			$author$project$View$fl($author$project$View$vz))
 		]));
+var $mdgriffith$elm_ui$Internal$Model$SpacingStyle = F3(
+	function (a, b, c) {
+		return {$: 'SpacingStyle', a: a, b: b, c: c};
+	});
+var $mdgriffith$elm_ui$Internal$Flag$spacing = $mdgriffith$elm_ui$Internal$Flag$flag(3);
+var $mdgriffith$elm_ui$Internal$Model$spacingName = F2(
+	function (x, y) {
+		return 'spacing-' + ($elm$core$String$fromInt(x) + ('-' + $elm$core$String$fromInt(y)));
+	});
+var $mdgriffith$elm_ui$Element$spacing = function (x) {
+	return A2(
+		$mdgriffith$elm_ui$Internal$Model$StyleClass,
+		$mdgriffith$elm_ui$Internal$Flag$spacing,
+		A3(
+			$mdgriffith$elm_ui$Internal$Model$SpacingStyle,
+			A2($mdgriffith$elm_ui$Internal$Model$spacingName, x, x),
+			x,
+			x));
+};
+var $author$project$View$fm = function (a) {
+	return $mdgriffith$elm_ui$Element$spacing(a);
+};
+var $mdgriffith$elm_ui$Internal$Model$Empty = {$: 'Empty'};
+var $mdgriffith$elm_ui$Element$none = $mdgriffith$elm_ui$Internal$Model$Empty;
+var $elm$html$Html$hr = _VirtualDom_node('hr');
+var $author$project$View$vaa = $mdgriffith$elm_ui$Element$html(
+	A2($elm$html$Html$hr, _List_Nil, _List_Nil));
 var $mdgriffith$elm_ui$Internal$Model$Button = {$: 'Button'};
 var $mdgriffith$elm_ui$Internal$Model$Describe = function (a) {
 	return {$: 'Describe', a: a};
@@ -11387,33 +11419,69 @@ var $mdgriffith$elm_ui$Element$Input$button = F2(
 				_List_fromArray(
 					[label])));
 	});
-var $mdgriffith$elm_ui$Internal$Model$SpacingStyle = F3(
-	function (a, b, c) {
-		return {$: 'SpacingStyle', a: a, b: b, c: c};
-	});
-var $mdgriffith$elm_ui$Internal$Flag$spacing = $mdgriffith$elm_ui$Internal$Flag$flag(3);
-var $mdgriffith$elm_ui$Internal$Model$spacingName = F2(
-	function (x, y) {
-		return 'spacing-' + ($elm$core$String$fromInt(x) + ('-' + $elm$core$String$fromInt(y)));
-	});
-var $mdgriffith$elm_ui$Element$spacing = function (x) {
-	return A2(
-		$mdgriffith$elm_ui$Internal$Model$StyleClass,
-		$mdgriffith$elm_ui$Internal$Flag$spacing,
-		A3(
-			$mdgriffith$elm_ui$Internal$Model$SpacingStyle,
-			A2($mdgriffith$elm_ui$Internal$Model$spacingName, x, x),
-			x,
-			x));
-};
-var $author$project$View$fm = function (a) {
-	return $mdgriffith$elm_ui$Element$spacing(a);
-};
-var $elm$html$Html$hr = _VirtualDom_node('hr');
-var $author$project$View$vaa = $mdgriffith$elm_ui$Element$html(
-	A2($elm$html$Html$hr, _List_Nil, _List_Nil));
+var $elm$svg$Svg$Attributes$strokeWidth = _VirtualDom_attribute('stroke-width');
+var $author$project$Icon$d = A2(
+	$elm$svg$Svg$svg,
+	_List_fromArray(
+		[
+			$elm$svg$Svg$Attributes$width('10'),
+			$elm$svg$Svg$Attributes$height('7')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			$elm$svg$Svg$path,
+			_List_fromArray(
+				[
+					$elm$svg$Svg$Attributes$d('M1 .799l4 4 4-4'),
+					$elm$svg$Svg$Attributes$stroke('#F47B56'),
+					$elm$svg$Svg$Attributes$strokeWidth('2'),
+					$elm$svg$Svg$Attributes$fill('none'),
+					$elm$svg$Svg$Attributes$fillRule('evenodd')
+				]),
+			_List_Nil)
+		]));
+var $author$project$View$vad = $mdgriffith$elm_ui$Element$html($author$project$Icon$d);
 var $author$project$View$vu = 'How many team members can I invite?';
-var $author$project$View$vv = 'What is the maximum file upload size?';
+var $author$project$View$vae = A2(
+	$mdgriffith$elm_ui$Element$Input$button,
+	_List_fromArray(
+		[
+			$author$project$View$ff($author$project$View$vr),
+			$author$project$View$fn(12),
+			$author$project$View$ff(
+			$author$project$View$fd(4))
+		]),
+	{
+		label: A2(
+			$mdgriffith$elm_ui$Element$row,
+			_List_fromArray(
+				[
+					$author$project$View$ff($author$project$View$vr)
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$mdgriffith$elm_ui$Element$el,
+					_List_fromArray(
+						[
+							$author$project$View$ff(
+							$author$project$View$fd(10)),
+							$author$project$View$vab,
+							$author$project$View$fn(15)
+						]),
+					$mdgriffith$elm_ui$Element$text($author$project$View$vu)),
+					A2(
+					$mdgriffith$elm_ui$Element$el,
+					_List_fromArray(
+						[
+							$author$project$View$ff(
+							$author$project$View$fd(1))
+						]),
+					$author$project$View$vad)
+				])),
+		onPress: $elm$core$Maybe$Nothing
+	});
 var $author$project$View$vw = 'How do I reset my password?';
 var $author$project$View$vx = 'Can I cancel my subscription?';
 var $author$project$View$vy = 'Do you provide additional support?';
@@ -11430,40 +11498,26 @@ var $author$project$View$unobb = A2(
 	_List_fromArray(
 		[
 			A2(
-			$mdgriffith$elm_ui$Element$Input$button,
+			$mdgriffith$elm_ui$Element$row,
 			_List_fromArray(
 				[
-					$mdgriffith$elm_ui$Element$Font$size(12),
-					$mdgriffith$elm_ui$Element$Font$family(
+					$author$project$View$ff($author$project$View$vr)
+				]),
+			_List_fromArray(
+				[
+					$author$project$View$vae,
+					A2(
+					$mdgriffith$elm_ui$Element$el,
 					_List_fromArray(
 						[
-							$mdgriffith$elm_ui$Element$Font$external(
-							{name: 'Kumbh Sans', url: $author$project$View$vk}),
-							$mdgriffith$elm_ui$Element$Font$sansSerif
-						]))
-				]),
-			{
-				label: $mdgriffith$elm_ui$Element$text($author$project$View$vu),
-				onPress: $elm$core$Maybe$Nothing
-			}),
+							$author$project$View$ff($author$project$View$vr),
+							$author$project$View$ff(
+							$author$project$View$fd(1))
+						]),
+					$mdgriffith$elm_ui$Element$none)
+				])),
 			$author$project$View$vaa,
-			A2(
-			$mdgriffith$elm_ui$Element$Input$button,
-			_List_fromArray(
-				[
-					$mdgriffith$elm_ui$Element$Font$size(12),
-					$mdgriffith$elm_ui$Element$Font$family(
-					_List_fromArray(
-						[
-							$mdgriffith$elm_ui$Element$Font$external(
-							{name: 'Kumbh Sans', url: $author$project$View$vk}),
-							$mdgriffith$elm_ui$Element$Font$sansSerif
-						]))
-				]),
-			{
-				label: $mdgriffith$elm_ui$Element$text($author$project$View$vv),
-				onPress: $elm$core$Maybe$Nothing
-			}),
+			$author$project$View$fl($author$project$View$vu),
 			$author$project$View$vaa,
 			$author$project$View$fl($author$project$View$vw),
 			$author$project$View$vaa,

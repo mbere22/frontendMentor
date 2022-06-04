@@ -4,6 +4,7 @@ import Element as E
 import Element.Background as Eb
 import Element.Border as Ebr
 import Element.Font as Ef
+import Element.Events as Ee
 import Icon as I
 import Html as H
 import Html.Attributes as Ha
@@ -40,12 +41,12 @@ vaa = E.html <| H.hr [] []
 vab = Ef.family [ Ef.external { name = "Kumbh Sans", url = vk }, Ef.sansSerif]
 vac = Ef.bold
 vad = E.html <| I.d
-vae = Ei.button [ff vr, fn 12, ff <| fd 4]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text vu, E.el [ff <|fd 1] vad]}
+vae = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text vu, E.el [ff <|fd 1] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 vaf = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text vv, E.el [ff <|fd 1] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 vag = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text vw, E.el [ff <|fd 1] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 vah = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text vx, E.el [ff <|fd 1] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 vai = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text vy, E.el [ff <|fd 1] vad]}, E.el [ff vr, ff <| fd 1] E.none]
-
+vaj = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text "hello", E.el [ff <|fd 1] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 
 --FUNCTIONS
 fa = \a -> Eb.color a  --set color to background
@@ -64,13 +65,15 @@ fl = \a -> E.text a
 fm = \a -> E.spacing a 
 fn = \a -> Ef.size a
 
+--TYPES
+
 view = E.layout [fc vl] body
 body = E.column [fa vm, vn, vo, fe <| fg 450, ff <| fg 950, fh 24] [uno]
 uno = E.row [ff vr, fe vr] [unoa, unob] 
 unoa = E.column [ff vr, fe vr, E.inFront unoab, E.inFront unoac][unoaa] 
 unob = E.column [ff vr, fe vr][unoba, unobb]
 unoba = E.column [ff vr, fe vr, fe <| fd 1][E.el [fn 30, vo, vab, vac] <| fl vz] 
-unobb = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [ E.row [ff vr][vae, E.el [ff vr, ff <| fd 1] E.none], vaa, vaf, vaa, vag, vaa, vah, vaa, vai, vaa]
+unobb = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [vae, vaa, vaf, vaa, vag, vaa, vah, vaa, vai, vaa, vaj]
 unoaa = E.el [ff vr, fe vr] vp
 unoab = E.el [ff vr, fe vr] vs
 unoac = E.el [ff vr, fe vr] vt 

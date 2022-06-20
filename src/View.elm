@@ -43,14 +43,18 @@ vaa = Ebr.widthEach {bottom = 1, left = 0, right = 0, top = 0}
 vab = Ef.family [ Ef.external { name = "Kumbh Sans", url = vk }, Ef.sansSerif]
 vac = Ef.bold
 vad = E.html <| I.d
-vae = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text vu, E.el [ff <|fd 1] vad]}, E.el [ff vr, ff <| fd 1] E.none]
-vaf = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text vv, E.el [ff <|fd 1] vad]}, E.el [ff vr, ff <| fd 1] E.none]
-vag = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text vw, E.el [ff <|fd 1] vad]}, E.el [ff vr, ff <| fd 1] E.none]
-vah = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text vx, E.el [ff <|fd 1] vad]}, E.el [ff vr, ff <| fd 1] E.none]
-vai = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text vy, E.el [ff <|fd 1] vad]}, E.el [ff vr, ff <| fd 1] E.none]
-vaj = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.el [ff <| fd 10, vab, fn 15] <| E.text "hello", E.el [ff <|fd 1] vad]}, E.el [ff vr, ff <| fd 1] E.none]
+vae = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vu], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
+vaf = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vv], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
+vag = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vw], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
+vah = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vx], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
+vai = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vy], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
+van = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vv], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 vak = Ebr.color va
 val = E.paddingEach {top=1, right = 1, bottom = 15, left = 1}
+vam = E.text "No more than 2GB. All files in your account must fit your allotted storage space."
+vao = E.spacing
+vap = E.alignTop
+
 --FUNCTIONS
 fa = \a -> Eb.color a  --set color to background
 fb = \a -> E.rgb255 a  --set color
@@ -76,7 +80,7 @@ uno = E.row [ff vr, fe vr] [unoa, unob]
 unoa = E.column [ff vr, fe vr, E.inFront unoab, E.inFront unoac][unoaa] 
 unob = E.column [ff vr, fe vr][unoba, unobb]
 unoba = E.column [ff vr, fe vr, fe <| fd 1] [E.el [fn 30, vo, vab, vac] <| fl vz] 
-unobb = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [vae, vaf, vag, vah, vai]
+unobb = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [vae, vaf, vag, vah, vai, van]
 unoaa = E.el [ff vr, fe vr] vp
 unoab = E.el [ff vr, fe vr] vs
 unoac = E.el [ff vr, fe vr] vt 

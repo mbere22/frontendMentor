@@ -11708,9 +11708,6 @@ var $mdgriffith$elm_ui$Element$spacing = function (x) {
 var $author$project$View$fm = function (a) {
 	return $mdgriffith$elm_ui$Element$spacing(a);
 };
-var $elm$html$Html$hr = _VirtualDom_node('hr');
-var $author$project$View$vaa = $mdgriffith$elm_ui$Element$html(
-	A2($elm$html$Html$hr, _List_Nil, _List_Nil));
 var $mdgriffith$elm_ui$Internal$Model$Button = {$: 'Button'};
 var $mdgriffith$elm_ui$Internal$Model$Describe = function (a) {
 	return {$: 'Describe', a: a};
@@ -11860,6 +11857,53 @@ var $mdgriffith$elm_ui$Element$Input$button = F2(
 	});
 var $mdgriffith$elm_ui$Internal$Model$Empty = {$: 'Empty'};
 var $mdgriffith$elm_ui$Element$none = $mdgriffith$elm_ui$Internal$Model$Empty;
+var $mdgriffith$elm_ui$Internal$Model$BorderWidth = F5(
+	function (a, b, c, d, e) {
+		return {$: 'BorderWidth', a: a, b: b, c: c, d: d, e: e};
+	});
+var $mdgriffith$elm_ui$Element$Border$width = function (v) {
+	return A2(
+		$mdgriffith$elm_ui$Internal$Model$StyleClass,
+		$mdgriffith$elm_ui$Internal$Flag$borderWidth,
+		A5(
+			$mdgriffith$elm_ui$Internal$Model$BorderWidth,
+			'b-' + $elm$core$String$fromInt(v),
+			v,
+			v,
+			v,
+			v));
+};
+var $mdgriffith$elm_ui$Element$Border$widthXY = F2(
+	function (x, y) {
+		return A2(
+			$mdgriffith$elm_ui$Internal$Model$StyleClass,
+			$mdgriffith$elm_ui$Internal$Flag$borderWidth,
+			A5(
+				$mdgriffith$elm_ui$Internal$Model$BorderWidth,
+				'b-' + ($elm$core$String$fromInt(x) + ('-' + $elm$core$String$fromInt(y))),
+				y,
+				x,
+				y,
+				x));
+	});
+var $mdgriffith$elm_ui$Element$Border$widthEach = function (_v0) {
+	var bottom = _v0.bottom;
+	var top = _v0.top;
+	var left = _v0.left;
+	var right = _v0.right;
+	return (_Utils_eq(top, bottom) && _Utils_eq(left, right)) ? (_Utils_eq(top, right) ? $mdgriffith$elm_ui$Element$Border$width(top) : A2($mdgriffith$elm_ui$Element$Border$widthXY, left, top)) : A2(
+		$mdgriffith$elm_ui$Internal$Model$StyleClass,
+		$mdgriffith$elm_ui$Internal$Flag$borderWidth,
+		A5(
+			$mdgriffith$elm_ui$Internal$Model$BorderWidth,
+			'b-' + ($elm$core$String$fromInt(top) + ('-' + ($elm$core$String$fromInt(right) + ('-' + ($elm$core$String$fromInt(bottom) + ('-' + $elm$core$String$fromInt(left))))))),
+			top,
+			right,
+			bottom,
+			left));
+};
+var $author$project$View$vaa = $mdgriffith$elm_ui$Element$Border$widthEach(
+	{bottom: 1, left: 0, right: 0, top: 0});
 var $elm$svg$Svg$Attributes$strokeWidth = _VirtualDom_attribute('stroke-width');
 var $author$project$Icon$d = A2(
 	$elm$svg$Svg$svg,
@@ -11883,6 +11927,71 @@ var $author$project$Icon$d = A2(
 			_List_Nil)
 		]));
 var $author$project$View$vad = $mdgriffith$elm_ui$Element$html($author$project$Icon$d);
+var $mdgriffith$elm_ui$Internal$Flag$borderColor = $mdgriffith$elm_ui$Internal$Flag$flag(28);
+var $mdgriffith$elm_ui$Element$Border$color = function (clr) {
+	return A2(
+		$mdgriffith$elm_ui$Internal$Model$StyleClass,
+		$mdgriffith$elm_ui$Internal$Flag$borderColor,
+		A3(
+			$mdgriffith$elm_ui$Internal$Model$Colored,
+			'bc-' + $mdgriffith$elm_ui$Internal$Model$formatColorClass(clr),
+			'border-color',
+			clr));
+};
+var $mdgriffith$elm_ui$Internal$Model$Rgba = F4(
+	function (a, b, c, d) {
+		return {$: 'Rgba', a: a, b: b, c: c, d: d};
+	});
+var $mdgriffith$elm_ui$Element$rgb255 = F3(
+	function (red, green, blue) {
+		return A4($mdgriffith$elm_ui$Internal$Model$Rgba, red / 255, green / 255, blue / 255, 1);
+	});
+var $author$project$View$fb = function (a) {
+	return $mdgriffith$elm_ui$Element$rgb255(a);
+};
+var $author$project$View$va = A3($author$project$View$fb, 231, 231, 233);
+var $author$project$View$vak = $mdgriffith$elm_ui$Element$Border$color($author$project$View$va);
+var $mdgriffith$elm_ui$Internal$Model$PaddingStyle = F5(
+	function (a, b, c, d, e) {
+		return {$: 'PaddingStyle', a: a, b: b, c: c, d: d, e: e};
+	});
+var $mdgriffith$elm_ui$Internal$Flag$padding = $mdgriffith$elm_ui$Internal$Flag$flag(2);
+var $mdgriffith$elm_ui$Internal$Model$paddingName = F4(
+	function (top, right, bottom, left) {
+		return 'pad-' + ($elm$core$String$fromInt(top) + ('-' + ($elm$core$String$fromInt(right) + ('-' + ($elm$core$String$fromInt(bottom) + ('-' + $elm$core$String$fromInt(left)))))));
+	});
+var $mdgriffith$elm_ui$Element$paddingEach = function (_v0) {
+	var top = _v0.top;
+	var right = _v0.right;
+	var bottom = _v0.bottom;
+	var left = _v0.left;
+	if (_Utils_eq(top, right) && (_Utils_eq(top, bottom) && _Utils_eq(top, left))) {
+		var topFloat = top;
+		return A2(
+			$mdgriffith$elm_ui$Internal$Model$StyleClass,
+			$mdgriffith$elm_ui$Internal$Flag$padding,
+			A5(
+				$mdgriffith$elm_ui$Internal$Model$PaddingStyle,
+				'p-' + $elm$core$String$fromInt(top),
+				topFloat,
+				topFloat,
+				topFloat,
+				topFloat));
+	} else {
+		return A2(
+			$mdgriffith$elm_ui$Internal$Model$StyleClass,
+			$mdgriffith$elm_ui$Internal$Flag$padding,
+			A5(
+				$mdgriffith$elm_ui$Internal$Model$PaddingStyle,
+				A4($mdgriffith$elm_ui$Internal$Model$paddingName, top, right, bottom, left),
+				top,
+				right,
+				bottom,
+				left));
+	}
+};
+var $author$project$View$val = $mdgriffith$elm_ui$Element$paddingEach(
+	{bottom: 15, left: 1, right: 1, top: 1});
 var $author$project$View$vu = 'How many team members can I invite?';
 var $author$project$View$vae = A2(
 	$mdgriffith$elm_ui$Element$row,
@@ -11899,7 +12008,10 @@ var $author$project$View$vae = A2(
 					$author$project$View$ff($author$project$View$vr),
 					$author$project$View$fn(12),
 					$author$project$View$ff(
-					$author$project$View$fd(4))
+					$author$project$View$fd(4)),
+					$author$project$View$vaa,
+					$author$project$View$vak,
+					$author$project$View$val
 				]),
 			{
 				label: A2(
@@ -11957,7 +12069,10 @@ var $author$project$View$vaf = A2(
 					$author$project$View$ff($author$project$View$vr),
 					$author$project$View$fn(12),
 					$author$project$View$ff(
-					$author$project$View$fd(4))
+					$author$project$View$fd(4)),
+					$author$project$View$vaa,
+					$author$project$View$vak,
+					$author$project$View$val
 				]),
 			{
 				label: A2(
@@ -12015,7 +12130,10 @@ var $author$project$View$vag = A2(
 					$author$project$View$ff($author$project$View$vr),
 					$author$project$View$fn(12),
 					$author$project$View$ff(
-					$author$project$View$fd(4))
+					$author$project$View$fd(4)),
+					$author$project$View$vaa,
+					$author$project$View$vak,
+					$author$project$View$val
 				]),
 			{
 				label: A2(
@@ -12073,7 +12191,10 @@ var $author$project$View$vah = A2(
 					$author$project$View$ff($author$project$View$vr),
 					$author$project$View$fn(12),
 					$author$project$View$ff(
-					$author$project$View$fd(4))
+					$author$project$View$fd(4)),
+					$author$project$View$vaa,
+					$author$project$View$vak,
+					$author$project$View$val
 				]),
 			{
 				label: A2(
@@ -12131,7 +12252,10 @@ var $author$project$View$vai = A2(
 					$author$project$View$ff($author$project$View$vr),
 					$author$project$View$fn(12),
 					$author$project$View$ff(
-					$author$project$View$fd(4))
+					$author$project$View$fd(4)),
+					$author$project$View$vaa,
+					$author$project$View$vak,
+					$author$project$View$val
 				]),
 			{
 				label: A2(
@@ -12173,63 +12297,6 @@ var $author$project$View$vai = A2(
 				]),
 			$mdgriffith$elm_ui$Element$none)
 		]));
-var $author$project$View$vaj = A2(
-	$mdgriffith$elm_ui$Element$row,
-	_List_fromArray(
-		[
-			$author$project$View$ff($author$project$View$vr)
-		]),
-	_List_fromArray(
-		[
-			A2(
-			$mdgriffith$elm_ui$Element$Input$button,
-			_List_fromArray(
-				[
-					$author$project$View$ff($author$project$View$vr),
-					$author$project$View$fn(12),
-					$author$project$View$ff(
-					$author$project$View$fd(4))
-				]),
-			{
-				label: A2(
-					$mdgriffith$elm_ui$Element$row,
-					_List_fromArray(
-						[
-							$author$project$View$ff($author$project$View$vr)
-						]),
-					_List_fromArray(
-						[
-							A2(
-							$mdgriffith$elm_ui$Element$el,
-							_List_fromArray(
-								[
-									$author$project$View$ff(
-									$author$project$View$fd(10)),
-									$author$project$View$vab,
-									$author$project$View$fn(15)
-								]),
-							$mdgriffith$elm_ui$Element$text('hello')),
-							A2(
-							$mdgriffith$elm_ui$Element$el,
-							_List_fromArray(
-								[
-									$author$project$View$ff(
-									$author$project$View$fd(1))
-								]),
-							$author$project$View$vad)
-						])),
-				onPress: $elm$core$Maybe$Nothing
-			}),
-			A2(
-			$mdgriffith$elm_ui$Element$el,
-			_List_fromArray(
-				[
-					$author$project$View$ff($author$project$View$vr),
-					$author$project$View$ff(
-					$author$project$View$fd(1))
-				]),
-			$mdgriffith$elm_ui$Element$none)
-		]));
 var $author$project$View$unobb = A2(
 	$mdgriffith$elm_ui$Element$column,
 	_List_fromArray(
@@ -12241,7 +12308,7 @@ var $author$project$View$unobb = A2(
 			$author$project$View$fd(3))
 		]),
 	_List_fromArray(
-		[$author$project$View$vae, $author$project$View$vaa, $author$project$View$vaf, $author$project$View$vaa, $author$project$View$vag, $author$project$View$vaa, $author$project$View$vah, $author$project$View$vaa, $author$project$View$vai, $author$project$View$vaa, $author$project$View$vaj]));
+		[$author$project$View$vae, $author$project$View$vaf, $author$project$View$vag, $author$project$View$vah, $author$project$View$vai]));
 var $author$project$View$unob = A2(
 	$mdgriffith$elm_ui$Element$column,
 	_List_fromArray(
@@ -12260,17 +12327,6 @@ var $author$project$View$uno = A2(
 		]),
 	_List_fromArray(
 		[$author$project$View$unoa, $author$project$View$unob]));
-var $mdgriffith$elm_ui$Internal$Model$Rgba = F4(
-	function (a, b, c, d) {
-		return {$: 'Rgba', a: a, b: b, c: c, d: d};
-	});
-var $mdgriffith$elm_ui$Element$rgb255 = F3(
-	function (red, green, blue) {
-		return A4($mdgriffith$elm_ui$Internal$Model$Rgba, red / 255, green / 255, blue / 255, 1);
-	});
-var $author$project$View$fb = function (a) {
-	return $mdgriffith$elm_ui$Element$rgb255(a);
-};
 var $author$project$View$vm = A3($author$project$View$fb, 255, 255, 255);
 var $mdgriffith$elm_ui$Internal$Model$AlignX = function (a) {
 	return {$: 'AlignX', a: a};
@@ -12560,7 +12616,7 @@ var $author$project$View$view = A2(
 			$author$project$View$fc($author$project$View$vl)
 		]),
 	$author$project$View$body);
-var $author$project$Main$model = $author$project$View$view;
+var $author$project$Main$init = $author$project$View$view;
 var $elm$browser$Browser$External = function (a) {
 	return {$: 'External', a: a};
 };
@@ -12811,13 +12867,13 @@ var $elm$browser$Browser$sandbox = function (impl) {
 };
 var $author$project$Main$update = F2(
 	function (a, b) {
-		return $author$project$Main$model;
+		return $author$project$Main$init;
 	});
 var $author$project$Main$view = function (a) {
-	return $author$project$Main$model;
+	return $author$project$Main$init;
 };
 var $author$project$Main$main = $elm$browser$Browser$sandbox(
-	{init: $author$project$Main$model, update: $author$project$Main$update, view: $author$project$Main$view});
+	{init: $author$project$Main$init, update: $author$project$Main$update, view: $author$project$Main$view});
 _Platform_export({'Main':{'init':$author$project$Main$main(
 	$elm$json$Json$Decode$succeed(_Utils_Tuple0))(0)}});}(this));
 

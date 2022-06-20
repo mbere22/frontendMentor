@@ -3,8 +3,8 @@ module Main exposing (main)
 import Browser as B
 import View as V
 
-main = B.sandbox {init = model, update = update, view = view}
+main = B.sandbox {init = init, update = update, view = view}
 
-model = V.view
-update a b = model
-view a = model 
+init = V.view
+update a b = init 
+view a = init 

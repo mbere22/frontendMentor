@@ -1,4 +1,4 @@
-module View exposing (view)
+module View exposing (view, Event)
 
 import Element as E
 import Element.Background as Eb
@@ -44,16 +44,16 @@ vab = Ef.family [ Ef.external { name = "Kumbh Sans", url = vk }, Ef.sansSerif]
 vac = Ef.bold
 vad = E.html <| I.d
 vae = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vu], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
-vaf = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vv], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
+vaf = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vv], E.paragraph[fn 12][vaq]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 vag = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vw], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 vah = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vx], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 vai = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vy], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
-van = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vv], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 vak = Ebr.color va
 val = E.paddingEach {top=1, right = 1, bottom = 15, left = 1}
-vam = E.text "No more than 2GB. All files in your account must fit your allotted storage space."
+vam = E.none 
 vao = E.spacing
 vap = E.alignTop
+vaq = E.text "No more than 2GB. All files in your account must fit your allotted storage space."
 
 --FUNCTIONS
 fa = \a -> Eb.color a  --set color to background
@@ -73,6 +73,7 @@ fm = \a -> E.spacing a
 fn = \a -> Ef.size a
 
 --TYPES
+type Event = Clicked
 
 view = E.layout [fc vl] body
 body = E.column [fa vm, vn, vo, fe <| fg 450, ff <| fg 950, fh 24] [uno]
@@ -80,7 +81,7 @@ uno = E.row [ff vr, fe vr] [unoa, unob]
 unoa = E.column [ff vr, fe vr, E.inFront unoab, E.inFront unoac][unoaa] 
 unob = E.column [ff vr, fe vr][unoba, unobb]
 unoba = E.column [ff vr, fe vr, fe <| fd 1] [E.el [fn 30, vo, vab, vac] <| fl vz] 
-unobb = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [vae, vaf, vag, vah, vai, van]
+unobb = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [vae, vaf, vag, vah, vai]
 unoaa = E.el [ff vr, fe vr] vp
 unoab = E.el [ff vr, fe vr] vs
 unoac = E.el [ff vr, fe vr] vt 

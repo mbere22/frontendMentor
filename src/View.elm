@@ -73,7 +73,8 @@ fm = \a -> E.spacing a
 fn = \a -> Ef.size a
 
 --TYPES
-type Event = Clicked
+
+type Event = Clickedc | Clickedd
 
 view = E.layout [fc vl] body
 body = E.column [fa vm, vn, vo, fe <| fg 450, ff <| fg 950, fh 24] [uno]
@@ -85,11 +86,3 @@ unobb = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [vae, vaf, vag, vah, vai]
 unoaa = E.el [ff vr, fe vr] vp
 unoab = E.el [ff vr, fe vr] vs
 unoac = E.el [ff vr, fe vr] vt 
-
-{-body = E.column [fe vr, ff vr] [uno, dos, tres]
-dos = E.row [fe vr, ff vr, fe <|fd 4] [dosa, dosb, dosc]
-dosb = E.row [fa vm, vn, vo, ff <| fd 3, fe vr] [E.text "hello"]
-uno = E.el [ff vr, fe <|fd 1] E.none
-tres = E.el [ff vr, fe <|fd 1] E.none
-dosa = E.el [ff <|fd 1] E.none 
-dosc = E.el [ff <|fd 1] E.none-} 

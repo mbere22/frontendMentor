@@ -5256,8 +5256,8 @@ var $author$project$Main$update = F2(
 				{d: b.b});
 		}
 	});
-var $author$project$Main$Clickedc = {$: 'Clickedc'};
-var $author$project$Main$Clickedd = {$: 'Clickedd'};
+var $author$project$Test$Clickedc = {$: 'Clickedc'};
+var $author$project$Test$Clickedd = {$: 'Clickedd'};
 var $mdgriffith$elm_ui$Internal$Model$Attr = function (a) {
 	return {$: 'Attr', a: a};
 };
@@ -11365,7 +11365,7 @@ var $mdgriffith$elm_ui$Element$layoutWith = F3(
 	});
 var $mdgriffith$elm_ui$Element$layout = $mdgriffith$elm_ui$Element$layoutWith(
 	{options: _List_Nil});
-var $author$project$Main$view = function (model) {
+var $author$project$Test$view = function (model) {
 	return A2(
 		$mdgriffith$elm_ui$Element$layout,
 		_List_Nil,
@@ -11383,7 +11383,7 @@ var $author$project$Main$view = function (model) {
 					_List_Nil,
 					{
 						label: model.a,
-						onPress: $elm$core$Maybe$Just($author$project$Main$Clickedc)
+						onPress: $elm$core$Maybe$Just($author$project$Test$Clickedc)
 					}),
 					A2($mdgriffith$elm_ui$Element$el, _List_Nil, model.c),
 					A2(
@@ -11391,11 +11391,12 @@ var $author$project$Main$view = function (model) {
 					_List_Nil,
 					{
 						label: model.a,
-						onPress: $elm$core$Maybe$Just($author$project$Main$Clickedd)
+						onPress: $elm$core$Maybe$Just($author$project$Test$Clickedd)
 					}),
 					A2($mdgriffith$elm_ui$Element$el, _List_Nil, model.d)
 				])));
 };
+var $author$project$Main$view = $author$project$Test$view;
 var $author$project$Main$main = $elm$browser$Browser$sandbox(
 	{init: $author$project$Main$init, update: $author$project$Main$update, view: $author$project$Main$view});
 _Platform_export({'Main':{'init':$author$project$Main$main(

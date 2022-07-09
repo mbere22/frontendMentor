@@ -1,4 +1,4 @@
-module View exposing (view, Event)
+module View exposing (view, Event(..))
 
 import Element as E
 import Element.Background as Eb
@@ -44,7 +44,7 @@ vab = Ef.family [ Ef.external { name = "Kumbh Sans", url = vk }, Ef.sansSerif]
 vac = Ef.bold
 vad = E.html <| I.d
 vae = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vu], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
-vaf = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vv], E.paragraph[fn 12][vaq]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
+vaf model = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Just Clickedc, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vv], E.paragraph[fn 12][model.c]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 vag = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vw], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 vah = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vx], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 vai = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Nothing, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vy], E.paragraph[fn 12][vam]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
@@ -76,13 +76,13 @@ fn = \a -> Ef.size a
 
 type Event = Clickedc | Clickedd
 
-view = E.layout [fc vl] body
-body = E.column [fa vm, vn, vo, fe <| fg 450, ff <| fg 950, fh 24] [uno]
-uno = E.row [ff vr, fe vr] [unoa, unob] 
+view model = E.layout [fc vl] <| body model
+body model= E.column [fa vm, vn, vo, fe <| fg 450, ff <| fg 950, fh 24] [uno model]
+uno model = E.row [ff vr, fe vr] [unoa, unob model] 
 unoa = E.column [ff vr, fe vr, E.inFront unoab, E.inFront unoac][unoaa] 
-unob = E.column [ff vr, fe vr][unoba, unobb]
+unob model = E.column [ff vr, fe vr][unoba, unobb model]
 unoba = E.column [ff vr, fe vr, fe <| fd 1] [E.el [fn 30, vo, vab, vac] <| fl vz] 
-unobb = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [vae, vaf, vag, vah, vai]
+unobb model = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [vae, vaf model, vag, vah, vai]
 unoaa = E.el [ff vr, fe vr] vp
 unoab = E.el [ff vr, fe vr] vs
 unoac = E.el [ff vr, fe vr] vt 

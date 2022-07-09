@@ -1,9 +1,13 @@
-module Model exposing (init)
+module Model exposing (init, update)
 
-import Element as E
+import Test as T
+import Init as I
 
-init = {a = vv, b = vaq, c = vam, d = vam}
+init = I.init
+update event model = 
+    case event of 
+        T.Clickedc -> 
+            {init | c = model.b}
+        T.Clickedd -> 
+            {init | d = model.b}
 
-vam = E.none 
-vaq = E.text "No more than 2GB. All files in your account must fit your allotted storage space."
-vv = E.text "What is the maximum file upload size?"

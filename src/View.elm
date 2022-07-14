@@ -84,9 +84,10 @@ view model = E.layoutWith {options = [E.focusStyle{ borderColor = Nothing
 body model= E.column [fa vm, vn, vo, fe <| fg 450, ff <| fg 950, fh 24] [uno model]
 uno model = E.row [ff vr, fe vr, E.inFront(unoac)] [unoa, unob model] 
 unoa = E.column [ff vr, fe vr, E.clip, E.inFront(unoab)][unoaa] 
-unob model = E.column [ff vr, fe vr][unoba, unobb model]
-unoba = E.column [ff vr, fe vr, fe <| fd 1] [E.el [fn 30, vo, vab, vac] <| fl vz] 
-unobb model = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [vae model, vaf model, vag model, vah model, vai model]
+unob model = E.column [ff vr, fe vr][unoba, unobb model, unobc]
+unoba = E.column [ff vr, fe vr, fe <| fd 5] [E.el [fn 30, vo, vab, vac] <| fl vz] 
+unobb model = E.column [ff vr, fe vr, fm 20, fe <| fd 9] [vae model, vaf model, vag model, vah model, vai model]
+unobc = E.column [ff vr, fe vr, fm 20, fe <| fd 4] [E.none]
 unoaa = E.column [ff vr, fe vr, E.clip, E.inFront(unoac)] [E.el [E.moveLeft 580, E.moveUp 300] vp] 
 unoab = E.el [E.moveLeft 85] vs
 unoac = E.el [E.moveDown 135, E.moveLeft 95] vt 

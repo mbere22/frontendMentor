@@ -11,4 +11,9 @@ update event model =
             {init | c = model.b}
         V.Clickedd -> 
             {init | d = model.b}
-
+        V.Clickedg ->
+            {init | g = model.b}
+        V.Clickedf ->
+            {init | f = model.b}
+        V.Clickede ->
+            {init | e = model.b}

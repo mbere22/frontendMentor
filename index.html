@@ -4436,7 +4436,10 @@ var $author$project$Init$init = {
 	a: $mdgriffith$elm_ui$Element$text($author$project$Init$vv),
 	b: $author$project$Init$vaq,
 	c: $author$project$Init$vam,
-	d: $author$project$Init$vam
+	d: $author$project$Init$vam,
+	e: $author$project$Init$vam,
+	f: $author$project$Init$vam,
+	g: $author$project$Init$vam
 };
 var $author$project$Model$init = $author$project$Init$init;
 var $author$project$Main$init = $author$project$Model$init;
@@ -5252,14 +5255,27 @@ var $elm$browser$Browser$sandbox = function (impl) {
 };
 var $author$project$Model$update = F2(
 	function (event, model) {
-		if (event.$ === 'Clickedc') {
-			return _Utils_update(
-				$author$project$Model$init,
-				{c: model.b});
-		} else {
-			return _Utils_update(
-				$author$project$Model$init,
-				{d: model.b});
+		switch (event.$) {
+			case 'Clickedc':
+				return _Utils_update(
+					$author$project$Model$init,
+					{c: model.b});
+			case 'Clickedd':
+				return _Utils_update(
+					$author$project$Model$init,
+					{d: model.b});
+			case 'Clickedg':
+				return _Utils_update(
+					$author$project$Model$init,
+					{g: model.b});
+			case 'Clickedf':
+				return _Utils_update(
+					$author$project$Model$init,
+					{f: model.b});
+			default:
+				return _Utils_update(
+					$author$project$Model$init,
+					{e: model.b});
 		}
 	});
 var $author$project$Main$update = $author$project$Model$update;
@@ -11982,6 +11998,7 @@ var $mdgriffith$elm_ui$Element$spacing = function (x) {
 var $author$project$View$fm = function (a) {
 	return $mdgriffith$elm_ui$Element$spacing(a);
 };
+var $author$project$View$Clickedd = {$: 'Clickedd'};
 var $mdgriffith$elm_ui$Internal$Model$Button = {$: 'Button'};
 var $mdgriffith$elm_ui$Internal$Model$Describe = function (a) {
 	return {$: 'Describe', a: a};
@@ -12317,91 +12334,92 @@ var $mdgriffith$elm_ui$Element$paddingEach = function (_v0) {
 };
 var $author$project$View$val = $mdgriffith$elm_ui$Element$paddingEach(
 	{bottom: 15, left: 1, right: 1, top: 1});
-var $author$project$View$vam = $mdgriffith$elm_ui$Element$none;
 var $author$project$View$vao = $mdgriffith$elm_ui$Element$spacing;
 var $mdgriffith$elm_ui$Internal$Model$Top = {$: 'Top'};
 var $mdgriffith$elm_ui$Element$alignTop = $mdgriffith$elm_ui$Internal$Model$AlignY($mdgriffith$elm_ui$Internal$Model$Top);
 var $author$project$View$vap = $mdgriffith$elm_ui$Element$alignTop;
 var $author$project$View$vu = 'How many team members can I invite?';
-var $author$project$View$vae = A2(
-	$mdgriffith$elm_ui$Element$row,
-	_List_fromArray(
-		[
-			$author$project$View$ff($author$project$View$vr)
-		]),
-	_List_fromArray(
-		[
-			A2(
-			$mdgriffith$elm_ui$Element$Input$button,
-			_List_fromArray(
-				[
-					$author$project$View$ff($author$project$View$vr),
-					$author$project$View$fn(12),
-					$author$project$View$ff(
-					$author$project$View$fd(4)),
-					$author$project$View$vaa,
-					$author$project$View$vak,
-					$author$project$View$val
-				]),
-			{
-				label: A2(
-					$mdgriffith$elm_ui$Element$row,
-					_List_fromArray(
-						[
-							$author$project$View$ff($author$project$View$vr)
-						]),
-					_List_fromArray(
-						[
-							A2(
-							$mdgriffith$elm_ui$Element$textColumn,
-							_List_fromArray(
-								[
-									$author$project$View$ff(
-									$author$project$View$fd(10)),
-									$author$project$View$vab,
-									$author$project$View$fn(15),
-									$author$project$View$vao(8)
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$mdgriffith$elm_ui$Element$paragraph,
-									_List_Nil,
-									_List_fromArray(
-										[
-											$mdgriffith$elm_ui$Element$text($author$project$View$vu)
-										])),
-									A2(
-									$mdgriffith$elm_ui$Element$paragraph,
-									_List_fromArray(
-										[
-											$author$project$View$fn(12)
-										]),
-									_List_fromArray(
-										[$author$project$View$vam]))
-								])),
-							A2(
-							$mdgriffith$elm_ui$Element$el,
-							_List_fromArray(
-								[
-									$author$project$View$ff(
-									$author$project$View$fd(1)),
-									$author$project$View$vap
-								]),
-							$author$project$View$vad)
-						])),
-				onPress: $elm$core$Maybe$Nothing
-			}),
-			A2(
-			$mdgriffith$elm_ui$Element$el,
-			_List_fromArray(
-				[
-					$author$project$View$ff($author$project$View$vr),
-					$author$project$View$ff(
-					$author$project$View$fd(1))
-				]),
-			$mdgriffith$elm_ui$Element$none)
-		]));
+var $author$project$View$vae = function (model) {
+	return A2(
+		$mdgriffith$elm_ui$Element$row,
+		_List_fromArray(
+			[
+				$author$project$View$ff($author$project$View$vr)
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$mdgriffith$elm_ui$Element$Input$button,
+				_List_fromArray(
+					[
+						$author$project$View$ff($author$project$View$vr),
+						$author$project$View$fn(12),
+						$author$project$View$ff(
+						$author$project$View$fd(4)),
+						$author$project$View$vaa,
+						$author$project$View$vak,
+						$author$project$View$val
+					]),
+				{
+					label: A2(
+						$mdgriffith$elm_ui$Element$row,
+						_List_fromArray(
+							[
+								$author$project$View$ff($author$project$View$vr)
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$mdgriffith$elm_ui$Element$textColumn,
+								_List_fromArray(
+									[
+										$author$project$View$ff(
+										$author$project$View$fd(10)),
+										$author$project$View$vab,
+										$author$project$View$fn(15),
+										$author$project$View$vao(8)
+									]),
+								_List_fromArray(
+									[
+										A2(
+										$mdgriffith$elm_ui$Element$paragraph,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$mdgriffith$elm_ui$Element$text($author$project$View$vu)
+											])),
+										A2(
+										$mdgriffith$elm_ui$Element$paragraph,
+										_List_fromArray(
+											[
+												$author$project$View$fn(12)
+											]),
+										_List_fromArray(
+											[model.d]))
+									])),
+								A2(
+								$mdgriffith$elm_ui$Element$el,
+								_List_fromArray(
+									[
+										$author$project$View$ff(
+										$author$project$View$fd(1)),
+										$author$project$View$vap
+									]),
+								$author$project$View$vad)
+							])),
+					onPress: $elm$core$Maybe$Just($author$project$View$Clickedd)
+				}),
+				A2(
+				$mdgriffith$elm_ui$Element$el,
+				_List_fromArray(
+					[
+						$author$project$View$ff($author$project$View$vr),
+						$author$project$View$ff(
+						$author$project$View$fd(1))
+					]),
+				$mdgriffith$elm_ui$Element$none)
+			]));
+};
 var $author$project$View$Clickedc = {$: 'Clickedc'};
 var $author$project$View$vv = 'What is the maximum file upload size?';
 var $author$project$View$vaf = function (model) {
@@ -12485,246 +12503,255 @@ var $author$project$View$vaf = function (model) {
 				$mdgriffith$elm_ui$Element$none)
 			]));
 };
+var $author$project$View$Clickedg = {$: 'Clickedg'};
 var $author$project$View$vw = 'How do I reset my password?';
-var $author$project$View$vag = A2(
-	$mdgriffith$elm_ui$Element$row,
-	_List_fromArray(
-		[
-			$author$project$View$ff($author$project$View$vr)
-		]),
-	_List_fromArray(
-		[
-			A2(
-			$mdgriffith$elm_ui$Element$Input$button,
-			_List_fromArray(
-				[
-					$author$project$View$ff($author$project$View$vr),
-					$author$project$View$fn(12),
-					$author$project$View$ff(
-					$author$project$View$fd(4)),
-					$author$project$View$vaa,
-					$author$project$View$vak,
-					$author$project$View$val
-				]),
-			{
-				label: A2(
-					$mdgriffith$elm_ui$Element$row,
-					_List_fromArray(
-						[
-							$author$project$View$ff($author$project$View$vr)
-						]),
-					_List_fromArray(
-						[
-							A2(
-							$mdgriffith$elm_ui$Element$textColumn,
-							_List_fromArray(
-								[
-									$author$project$View$ff(
-									$author$project$View$fd(10)),
-									$author$project$View$vab,
-									$author$project$View$fn(15),
-									$author$project$View$vao(8)
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$mdgriffith$elm_ui$Element$paragraph,
-									_List_Nil,
-									_List_fromArray(
-										[
-											$mdgriffith$elm_ui$Element$text($author$project$View$vw)
-										])),
-									A2(
-									$mdgriffith$elm_ui$Element$paragraph,
-									_List_fromArray(
-										[
-											$author$project$View$fn(12)
-										]),
-									_List_fromArray(
-										[$author$project$View$vam]))
-								])),
-							A2(
-							$mdgriffith$elm_ui$Element$el,
-							_List_fromArray(
-								[
-									$author$project$View$ff(
-									$author$project$View$fd(1)),
-									$author$project$View$vap
-								]),
-							$author$project$View$vad)
-						])),
-				onPress: $elm$core$Maybe$Nothing
-			}),
-			A2(
-			$mdgriffith$elm_ui$Element$el,
-			_List_fromArray(
-				[
-					$author$project$View$ff($author$project$View$vr),
-					$author$project$View$ff(
-					$author$project$View$fd(1))
-				]),
-			$mdgriffith$elm_ui$Element$none)
-		]));
+var $author$project$View$vag = function (model) {
+	return A2(
+		$mdgriffith$elm_ui$Element$row,
+		_List_fromArray(
+			[
+				$author$project$View$ff($author$project$View$vr)
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$mdgriffith$elm_ui$Element$Input$button,
+				_List_fromArray(
+					[
+						$author$project$View$ff($author$project$View$vr),
+						$author$project$View$fn(12),
+						$author$project$View$ff(
+						$author$project$View$fd(4)),
+						$author$project$View$vaa,
+						$author$project$View$vak,
+						$author$project$View$val
+					]),
+				{
+					label: A2(
+						$mdgriffith$elm_ui$Element$row,
+						_List_fromArray(
+							[
+								$author$project$View$ff($author$project$View$vr)
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$mdgriffith$elm_ui$Element$textColumn,
+								_List_fromArray(
+									[
+										$author$project$View$ff(
+										$author$project$View$fd(10)),
+										$author$project$View$vab,
+										$author$project$View$fn(15),
+										$author$project$View$vao(8)
+									]),
+								_List_fromArray(
+									[
+										A2(
+										$mdgriffith$elm_ui$Element$paragraph,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$mdgriffith$elm_ui$Element$text($author$project$View$vw)
+											])),
+										A2(
+										$mdgriffith$elm_ui$Element$paragraph,
+										_List_fromArray(
+											[
+												$author$project$View$fn(12)
+											]),
+										_List_fromArray(
+											[model.g]))
+									])),
+								A2(
+								$mdgriffith$elm_ui$Element$el,
+								_List_fromArray(
+									[
+										$author$project$View$ff(
+										$author$project$View$fd(1)),
+										$author$project$View$vap
+									]),
+								$author$project$View$vad)
+							])),
+					onPress: $elm$core$Maybe$Just($author$project$View$Clickedg)
+				}),
+				A2(
+				$mdgriffith$elm_ui$Element$el,
+				_List_fromArray(
+					[
+						$author$project$View$ff($author$project$View$vr),
+						$author$project$View$ff(
+						$author$project$View$fd(1))
+					]),
+				$mdgriffith$elm_ui$Element$none)
+			]));
+};
+var $author$project$View$Clickedf = {$: 'Clickedf'};
 var $author$project$View$vx = 'Can I cancel my subscription?';
-var $author$project$View$vah = A2(
-	$mdgriffith$elm_ui$Element$row,
-	_List_fromArray(
-		[
-			$author$project$View$ff($author$project$View$vr)
-		]),
-	_List_fromArray(
-		[
-			A2(
-			$mdgriffith$elm_ui$Element$Input$button,
-			_List_fromArray(
-				[
-					$author$project$View$ff($author$project$View$vr),
-					$author$project$View$fn(12),
-					$author$project$View$ff(
-					$author$project$View$fd(4)),
-					$author$project$View$vaa,
-					$author$project$View$vak,
-					$author$project$View$val
-				]),
-			{
-				label: A2(
-					$mdgriffith$elm_ui$Element$row,
-					_List_fromArray(
-						[
-							$author$project$View$ff($author$project$View$vr)
-						]),
-					_List_fromArray(
-						[
-							A2(
-							$mdgriffith$elm_ui$Element$textColumn,
-							_List_fromArray(
-								[
-									$author$project$View$ff(
-									$author$project$View$fd(10)),
-									$author$project$View$vab,
-									$author$project$View$fn(15),
-									$author$project$View$vao(8)
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$mdgriffith$elm_ui$Element$paragraph,
-									_List_Nil,
-									_List_fromArray(
-										[
-											$mdgriffith$elm_ui$Element$text($author$project$View$vx)
-										])),
-									A2(
-									$mdgriffith$elm_ui$Element$paragraph,
-									_List_fromArray(
-										[
-											$author$project$View$fn(12)
-										]),
-									_List_fromArray(
-										[$author$project$View$vam]))
-								])),
-							A2(
-							$mdgriffith$elm_ui$Element$el,
-							_List_fromArray(
-								[
-									$author$project$View$ff(
-									$author$project$View$fd(1)),
-									$author$project$View$vap
-								]),
-							$author$project$View$vad)
-						])),
-				onPress: $elm$core$Maybe$Nothing
-			}),
-			A2(
-			$mdgriffith$elm_ui$Element$el,
-			_List_fromArray(
-				[
-					$author$project$View$ff($author$project$View$vr),
-					$author$project$View$ff(
-					$author$project$View$fd(1))
-				]),
-			$mdgriffith$elm_ui$Element$none)
-		]));
+var $author$project$View$vah = function (model) {
+	return A2(
+		$mdgriffith$elm_ui$Element$row,
+		_List_fromArray(
+			[
+				$author$project$View$ff($author$project$View$vr)
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$mdgriffith$elm_ui$Element$Input$button,
+				_List_fromArray(
+					[
+						$author$project$View$ff($author$project$View$vr),
+						$author$project$View$fn(12),
+						$author$project$View$ff(
+						$author$project$View$fd(4)),
+						$author$project$View$vaa,
+						$author$project$View$vak,
+						$author$project$View$val
+					]),
+				{
+					label: A2(
+						$mdgriffith$elm_ui$Element$row,
+						_List_fromArray(
+							[
+								$author$project$View$ff($author$project$View$vr)
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$mdgriffith$elm_ui$Element$textColumn,
+								_List_fromArray(
+									[
+										$author$project$View$ff(
+										$author$project$View$fd(10)),
+										$author$project$View$vab,
+										$author$project$View$fn(15),
+										$author$project$View$vao(8)
+									]),
+								_List_fromArray(
+									[
+										A2(
+										$mdgriffith$elm_ui$Element$paragraph,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$mdgriffith$elm_ui$Element$text($author$project$View$vx)
+											])),
+										A2(
+										$mdgriffith$elm_ui$Element$paragraph,
+										_List_fromArray(
+											[
+												$author$project$View$fn(12)
+											]),
+										_List_fromArray(
+											[model.f]))
+									])),
+								A2(
+								$mdgriffith$elm_ui$Element$el,
+								_List_fromArray(
+									[
+										$author$project$View$ff(
+										$author$project$View$fd(1)),
+										$author$project$View$vap
+									]),
+								$author$project$View$vad)
+							])),
+					onPress: $elm$core$Maybe$Just($author$project$View$Clickedf)
+				}),
+				A2(
+				$mdgriffith$elm_ui$Element$el,
+				_List_fromArray(
+					[
+						$author$project$View$ff($author$project$View$vr),
+						$author$project$View$ff(
+						$author$project$View$fd(1))
+					]),
+				$mdgriffith$elm_ui$Element$none)
+			]));
+};
+var $author$project$View$Clickede = {$: 'Clickede'};
 var $author$project$View$vy = 'Do you provide additional support?';
-var $author$project$View$vai = A2(
-	$mdgriffith$elm_ui$Element$row,
-	_List_fromArray(
-		[
-			$author$project$View$ff($author$project$View$vr)
-		]),
-	_List_fromArray(
-		[
-			A2(
-			$mdgriffith$elm_ui$Element$Input$button,
-			_List_fromArray(
-				[
-					$author$project$View$ff($author$project$View$vr),
-					$author$project$View$fn(12),
-					$author$project$View$ff(
-					$author$project$View$fd(4)),
-					$author$project$View$vaa,
-					$author$project$View$vak,
-					$author$project$View$val
-				]),
-			{
-				label: A2(
-					$mdgriffith$elm_ui$Element$row,
-					_List_fromArray(
-						[
-							$author$project$View$ff($author$project$View$vr)
-						]),
-					_List_fromArray(
-						[
-							A2(
-							$mdgriffith$elm_ui$Element$textColumn,
-							_List_fromArray(
-								[
-									$author$project$View$ff(
-									$author$project$View$fd(10)),
-									$author$project$View$vab,
-									$author$project$View$fn(15),
-									$author$project$View$vao(8)
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$mdgriffith$elm_ui$Element$paragraph,
-									_List_Nil,
-									_List_fromArray(
-										[
-											$mdgriffith$elm_ui$Element$text($author$project$View$vy)
-										])),
-									A2(
-									$mdgriffith$elm_ui$Element$paragraph,
-									_List_fromArray(
-										[
-											$author$project$View$fn(12)
-										]),
-									_List_fromArray(
-										[$author$project$View$vam]))
-								])),
-							A2(
-							$mdgriffith$elm_ui$Element$el,
-							_List_fromArray(
-								[
-									$author$project$View$ff(
-									$author$project$View$fd(1)),
-									$author$project$View$vap
-								]),
-							$author$project$View$vad)
-						])),
-				onPress: $elm$core$Maybe$Nothing
-			}),
-			A2(
-			$mdgriffith$elm_ui$Element$el,
-			_List_fromArray(
-				[
-					$author$project$View$ff($author$project$View$vr),
-					$author$project$View$ff(
-					$author$project$View$fd(1))
-				]),
-			$mdgriffith$elm_ui$Element$none)
-		]));
+var $author$project$View$vai = function (model) {
+	return A2(
+		$mdgriffith$elm_ui$Element$row,
+		_List_fromArray(
+			[
+				$author$project$View$ff($author$project$View$vr)
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$mdgriffith$elm_ui$Element$Input$button,
+				_List_fromArray(
+					[
+						$author$project$View$ff($author$project$View$vr),
+						$author$project$View$fn(12),
+						$author$project$View$ff(
+						$author$project$View$fd(4)),
+						$author$project$View$vaa,
+						$author$project$View$vak,
+						$author$project$View$val
+					]),
+				{
+					label: A2(
+						$mdgriffith$elm_ui$Element$row,
+						_List_fromArray(
+							[
+								$author$project$View$ff($author$project$View$vr)
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$mdgriffith$elm_ui$Element$textColumn,
+								_List_fromArray(
+									[
+										$author$project$View$ff(
+										$author$project$View$fd(10)),
+										$author$project$View$vab,
+										$author$project$View$fn(15),
+										$author$project$View$vao(8)
+									]),
+								_List_fromArray(
+									[
+										A2(
+										$mdgriffith$elm_ui$Element$paragraph,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$mdgriffith$elm_ui$Element$text($author$project$View$vy)
+											])),
+										A2(
+										$mdgriffith$elm_ui$Element$paragraph,
+										_List_fromArray(
+											[
+												$author$project$View$fn(12)
+											]),
+										_List_fromArray(
+											[model.e]))
+									])),
+								A2(
+								$mdgriffith$elm_ui$Element$el,
+								_List_fromArray(
+									[
+										$author$project$View$ff(
+										$author$project$View$fd(1)),
+										$author$project$View$vap
+									]),
+								$author$project$View$vad)
+							])),
+					onPress: $elm$core$Maybe$Just($author$project$View$Clickede)
+				}),
+				A2(
+				$mdgriffith$elm_ui$Element$el,
+				_List_fromArray(
+					[
+						$author$project$View$ff($author$project$View$vr),
+						$author$project$View$ff(
+						$author$project$View$fd(1))
+					]),
+				$mdgriffith$elm_ui$Element$none)
+			]));
+};
 var $author$project$View$unobb = function (model) {
 	return A2(
 		$mdgriffith$elm_ui$Element$column,
@@ -12738,11 +12765,11 @@ var $author$project$View$unobb = function (model) {
 			]),
 		_List_fromArray(
 			[
-				$author$project$View$vae,
+				$author$project$View$vae(model),
 				$author$project$View$vaf(model),
-				$author$project$View$vag,
-				$author$project$View$vah,
-				$author$project$View$vai
+				$author$project$View$vag(model),
+				$author$project$View$vah(model),
+				$author$project$View$vai(model)
 			]));
 };
 var $author$project$View$unob = function (model) {

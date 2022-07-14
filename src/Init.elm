@@ -67,4 +67,4 @@ fl = \a -> E.text a
 fm = \a -> E.spacing a 
 fn = \a -> Ef.size a
 
-init = {a = E.text vv, b = vaq, c = vam, d = vam}
+init = {a = E.text vv, b = vaq, c = vam, d = vam, e = vam, f=vam, g=vam}

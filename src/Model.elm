@@ -10,7 +10,7 @@ update event model =
         V.Clickedc -> 
             {init | c = model.b}
         V.Clickedd -> 
-            {init | d = model.b}
+            {init | d = model.b, h = model.i, k = model.j}
         V.Clickedg ->
             {init | g = model.b}
         V.Clickedf ->

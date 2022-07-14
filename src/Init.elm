@@ -67,4 +67,9 @@ fl = \a -> E.text a
 fm = \a -> E.spacing a 
 fn = \a -> Ef.size a
 
-init = {a = E.text vv, b = vaq, c = vam, d = vam, e = vam, f=vam, g=vam}
+init = {a = E.text vv, b = vaq, c = vam, d = vam, e = vam, f=vam, g=vam, h=mac, i=maa, j =mab, k = mad }
+
+maa = E.rotate(pi)
+mab = E.moveLeft(turns(4))
+mac = E.rotate(2*pi)
+mad = E.moveLeft(turns(0))

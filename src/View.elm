@@ -43,11 +43,11 @@ vaa = Ebr.widthEach {bottom = 1, left = 0, right = 0, top = 0}
 vab = Ef.family [ Ef.external { name = "Kumbh Sans", url = vk }, Ef.sansSerif]
 vac = Ef.bold
 vad = E.html <| I.d
-vae model = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Just Clickedd, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vu], E.paragraph[fn 12][model.d]], E.el [ff <|fd 1, vap, model.h, model.k] vad]}, E.el [ff vr, ff <| fd 1] E.none]
-vaf model = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Just Clickedc, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vv], E.paragraph[fn 12][model.c]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
-vag model = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Just Clickedg, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vw], E.paragraph[fn 12][model.g]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
-vah model = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Just Clickedf, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vx], E.paragraph[fn 12][model.f]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
-vai model = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Just Clickede, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [][E.text vy], E.paragraph[fn 12][model.e]], E.el [ff <|fd 1, vap] vad]}, E.el [ff vr, ff <| fd 1] E.none]
+vae model = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Just Clickedd, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [model.m][E.text vu], E.paragraph[fn 12][model.d]], E.el [ff <|fd 1, vap, model.h, model.k] vad]}, E.el [ff vr, ff <| fd 1] E.none]
+vaf model = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Just Clickedc, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [model.p][E.text vv], E.paragraph[fn 12][model.c]], E.el [ff <|fd 1, vap, model.n, model.o] vad]}, E.el [ff vr, ff <| fd 1] E.none]
+vag model = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Just Clickedg, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [model.s][E.text vw], E.paragraph[fn 12][model.g]], E.el [ff <|fd 1, vap, model.q, model.r] vad]}, E.el [ff vr, ff <| fd 1] E.none]
+vah model = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Just Clickedf, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [model.v][E.text vx], E.paragraph[fn 12][model.f]], E.el [ff <|fd 1, vap, model.t, model.u] vad]}, E.el [ff vr, ff <| fd 1] E.none]
+vai model = E.row [ff vr][Ei.button [ff vr, fn 12, ff <| fd 4, vaa, vak, val]{onPress= Just Clickede, label=E.row [ff vr][E.textColumn [ff <| fd 10, vab, fn 15, vao 8] [E.paragraph [model.y][E.text vy], E.paragraph[fn 12][model.e]], E.el [ff <|fd 1, vap, model.w, model.x] vad]}, E.el [ff vr, ff <| fd 1] E.none]
 vak = Ebr.color va
 val = E.paddingEach {top=1, right = 1, bottom = 15, left = 1}
 vam = E.none 

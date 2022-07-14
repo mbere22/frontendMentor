@@ -4555,6 +4555,19 @@ var $author$project$Init$mab = $mdgriffith$elm_ui$Element$moveLeft(
 var $author$project$Init$mac = $mdgriffith$elm_ui$Element$rotate(2 * $elm$core$Basics$pi);
 var $author$project$Init$mad = $mdgriffith$elm_ui$Element$moveLeft(
 	$elm$core$Basics$turns(0));
+var $mdgriffith$elm_ui$Internal$Model$Class = F2(
+	function (a, b) {
+		return {$: 'Class', a: a, b: b};
+	});
+var $mdgriffith$elm_ui$Internal$Style$classes = {above: 'a', active: 'atv', alignBottom: 'ab', alignCenterX: 'cx', alignCenterY: 'cy', alignContainerBottom: 'acb', alignContainerCenterX: 'accx', alignContainerCenterY: 'accy', alignContainerRight: 'acr', alignLeft: 'al', alignRight: 'ar', alignTop: 'at', alignedHorizontally: 'ah', alignedVertically: 'av', any: 's', behind: 'bh', below: 'b', bold: 'w7', borderDashed: 'bd', borderDotted: 'bdt', borderNone: 'bn', borderSolid: 'bs', capturePointerEvents: 'cpe', clip: 'cp', clipX: 'cpx', clipY: 'cpy', column: 'c', container: 'ctr', contentBottom: 'cb', contentCenterX: 'ccx', contentCenterY: 'ccy', contentLeft: 'cl', contentRight: 'cr', contentTop: 'ct', cursorPointer: 'cptr', cursorText: 'ctxt', focus: 'fcs', focusedWithin: 'focus-within', fullSize: 'fs', grid: 'g', hasBehind: 'hbh', heightContent: 'hc', heightExact: 'he', heightFill: 'hf', heightFillPortion: 'hfp', hover: 'hv', imageContainer: 'ic', inFront: 'fr', inputLabel: 'lbl', inputMultiline: 'iml', inputMultilineFiller: 'imlf', inputMultilineParent: 'imlp', inputMultilineWrapper: 'implw', inputText: 'it', italic: 'i', link: 'lnk', nearby: 'nb', noTextSelection: 'notxt', onLeft: 'ol', onRight: 'or', opaque: 'oq', overflowHidden: 'oh', page: 'pg', paragraph: 'p', passPointerEvents: 'ppe', root: 'ui', row: 'r', scrollbars: 'sb', scrollbarsX: 'sbx', scrollbarsY: 'sby', seButton: 'sbt', single: 'e', sizeByCapital: 'cap', spaceEvenly: 'sev', strike: 'sk', text: 't', textCenter: 'tc', textExtraBold: 'w8', textExtraLight: 'w2', textHeavy: 'w9', textJustify: 'tj', textJustifyAll: 'tja', textLeft: 'tl', textLight: 'w3', textMedium: 'w5', textNormalWeight: 'w4', textRight: 'tr', textSemiBold: 'w6', textThin: 'w1', textUnitalicized: 'tun', transition: 'ts', transparent: 'clr', underline: 'u', widthContent: 'wc', widthExact: 'we', widthFill: 'wf', widthFillPortion: 'wfp', wrapped: 'wrp'};
+var $mdgriffith$elm_ui$Internal$Flag$fontWeight = $mdgriffith$elm_ui$Internal$Flag$flag(13);
+var $mdgriffith$elm_ui$Element$Font$extraBold = A2($mdgriffith$elm_ui$Internal$Model$Class, $mdgriffith$elm_ui$Internal$Flag$fontWeight, $mdgriffith$elm_ui$Internal$Style$classes.textExtraBold);
+var $author$project$Init$mae = $mdgriffith$elm_ui$Element$Font$extraBold;
+var $mdgriffith$elm_ui$Element$Font$regular = A2($mdgriffith$elm_ui$Internal$Model$Class, $mdgriffith$elm_ui$Internal$Flag$fontWeight, $mdgriffith$elm_ui$Internal$Style$classes.textNormalWeight);
+var $author$project$Init$maf = $mdgriffith$elm_ui$Element$Font$regular;
+var $author$project$Init$mag = $author$project$Init$mac;
+var $author$project$Init$mah = $author$project$Init$mad;
+var $author$project$Init$mai = $author$project$Init$maf;
 var $mdgriffith$elm_ui$Internal$Model$Text = function (a) {
 	return {$: 'Text', a: a};
 };
@@ -4577,7 +4590,21 @@ var $author$project$Init$init = {
 	h: $author$project$Init$mac,
 	i: $author$project$Init$maa,
 	j: $author$project$Init$mab,
-	k: $author$project$Init$mad
+	k: $author$project$Init$mad,
+	l: $author$project$Init$mae,
+	m: $author$project$Init$maf,
+	n: $author$project$Init$mag,
+	o: $author$project$Init$mah,
+	p: $author$project$Init$mai,
+	q: $author$project$Init$mac,
+	r: $author$project$Init$mad,
+	s: $author$project$Init$maf,
+	t: $author$project$Init$mac,
+	u: $author$project$Init$mad,
+	v: $author$project$Init$maf,
+	w: $author$project$Init$mac,
+	x: $author$project$Init$mad,
+	y: $author$project$Init$maf
 };
 var $author$project$Model$init = $author$project$Init$init;
 var $author$project$Main$init = $author$project$Model$init;
@@ -5314,23 +5341,23 @@ var $author$project$Model$update = F2(
 			case 'Clickedc':
 				return _Utils_update(
 					$author$project$Model$init,
-					{c: model.b});
+					{c: model.b, n: model.i, o: model.j, p: model.l});
 			case 'Clickedd':
 				return _Utils_update(
 					$author$project$Model$init,
-					{d: model.b, h: model.i, k: model.j});
+					{d: model.b, h: model.i, k: model.j, m: model.l});
 			case 'Clickedg':
 				return _Utils_update(
 					$author$project$Model$init,
-					{g: model.b});
+					{g: model.b, q: model.i, r: model.j, s: model.l});
 			case 'Clickedf':
 				return _Utils_update(
 					$author$project$Model$init,
-					{f: model.b});
+					{f: model.b, t: model.i, u: model.j, v: model.l});
 			default:
 				return _Utils_update(
 					$author$project$Model$init,
-					{e: model.b});
+					{e: model.b, w: model.i, x: model.j, y: model.l});
 		}
 	});
 var $author$project$Main$update = $author$project$Model$update;
@@ -5339,7 +5366,6 @@ var $mdgriffith$elm_ui$Internal$Model$Unkeyed = function (a) {
 };
 var $mdgriffith$elm_ui$Internal$Model$AsColumn = {$: 'AsColumn'};
 var $mdgriffith$elm_ui$Internal$Model$asColumn = $mdgriffith$elm_ui$Internal$Model$AsColumn;
-var $mdgriffith$elm_ui$Internal$Style$classes = {above: 'a', active: 'atv', alignBottom: 'ab', alignCenterX: 'cx', alignCenterY: 'cy', alignContainerBottom: 'acb', alignContainerCenterX: 'accx', alignContainerCenterY: 'accy', alignContainerRight: 'acr', alignLeft: 'al', alignRight: 'ar', alignTop: 'at', alignedHorizontally: 'ah', alignedVertically: 'av', any: 's', behind: 'bh', below: 'b', bold: 'w7', borderDashed: 'bd', borderDotted: 'bdt', borderNone: 'bn', borderSolid: 'bs', capturePointerEvents: 'cpe', clip: 'cp', clipX: 'cpx', clipY: 'cpy', column: 'c', container: 'ctr', contentBottom: 'cb', contentCenterX: 'ccx', contentCenterY: 'ccy', contentLeft: 'cl', contentRight: 'cr', contentTop: 'ct', cursorPointer: 'cptr', cursorText: 'ctxt', focus: 'fcs', focusedWithin: 'focus-within', fullSize: 'fs', grid: 'g', hasBehind: 'hbh', heightContent: 'hc', heightExact: 'he', heightFill: 'hf', heightFillPortion: 'hfp', hover: 'hv', imageContainer: 'ic', inFront: 'fr', inputLabel: 'lbl', inputMultiline: 'iml', inputMultilineFiller: 'imlf', inputMultilineParent: 'imlp', inputMultilineWrapper: 'implw', inputText: 'it', italic: 'i', link: 'lnk', nearby: 'nb', noTextSelection: 'notxt', onLeft: 'ol', onRight: 'or', opaque: 'oq', overflowHidden: 'oh', page: 'pg', paragraph: 'p', passPointerEvents: 'ppe', root: 'ui', row: 'r', scrollbars: 'sb', scrollbarsX: 'sbx', scrollbarsY: 'sby', seButton: 'sbt', single: 'e', sizeByCapital: 'cap', spaceEvenly: 'sev', strike: 'sk', text: 't', textCenter: 'tc', textExtraBold: 'w8', textExtraLight: 'w2', textHeavy: 'w9', textJustify: 'tj', textJustifyAll: 'tja', textLeft: 'tl', textLight: 'w3', textMedium: 'w5', textNormalWeight: 'w4', textRight: 'tr', textSemiBold: 'w6', textThin: 'w1', textUnitalicized: 'tun', transition: 'ts', transparent: 'clr', underline: 'u', widthContent: 'wc', widthExact: 'we', widthFill: 'wf', widthFillPortion: 'wfp', wrapped: 'wrp'};
 var $mdgriffith$elm_ui$Internal$Model$Generic = {$: 'Generic'};
 var $mdgriffith$elm_ui$Internal$Model$div = $mdgriffith$elm_ui$Internal$Model$Generic;
 var $mdgriffith$elm_ui$Internal$Model$NoNearbyChildren = {$: 'NoNearbyChildren'};
@@ -11982,11 +12008,6 @@ var $author$project$View$vab = $mdgriffith$elm_ui$Element$Font$family(
 			{name: 'Kumbh Sans', url: $author$project$View$vk}),
 			$mdgriffith$elm_ui$Element$Font$sansSerif
 		]));
-var $mdgriffith$elm_ui$Internal$Model$Class = F2(
-	function (a, b) {
-		return {$: 'Class', a: a, b: b};
-	});
-var $mdgriffith$elm_ui$Internal$Flag$fontWeight = $mdgriffith$elm_ui$Internal$Flag$flag(13);
 var $mdgriffith$elm_ui$Element$Font$bold = A2($mdgriffith$elm_ui$Internal$Model$Class, $mdgriffith$elm_ui$Internal$Flag$fontWeight, $mdgriffith$elm_ui$Internal$Style$classes.bold);
 var $author$project$View$vac = $mdgriffith$elm_ui$Element$Font$bold;
 var $mdgriffith$elm_ui$Internal$Model$AlignY = function (a) {
@@ -12425,7 +12446,8 @@ var $author$project$View$vae = function (model) {
 									[
 										A2(
 										$mdgriffith$elm_ui$Element$paragraph,
-										_List_Nil,
+										_List_fromArray(
+											[model.m]),
 										_List_fromArray(
 											[
 												$mdgriffith$elm_ui$Element$text($author$project$View$vu)
@@ -12510,7 +12532,8 @@ var $author$project$View$vaf = function (model) {
 									[
 										A2(
 										$mdgriffith$elm_ui$Element$paragraph,
-										_List_Nil,
+										_List_fromArray(
+											[model.p]),
 										_List_fromArray(
 											[
 												$mdgriffith$elm_ui$Element$text($author$project$View$vv)
@@ -12530,7 +12553,9 @@ var $author$project$View$vaf = function (model) {
 									[
 										$author$project$View$ff(
 										$author$project$View$fd(1)),
-										$author$project$View$vap
+										$author$project$View$vap,
+										model.n,
+										model.o
 									]),
 								$author$project$View$vad)
 							])),
@@ -12593,7 +12618,8 @@ var $author$project$View$vag = function (model) {
 									[
 										A2(
 										$mdgriffith$elm_ui$Element$paragraph,
-										_List_Nil,
+										_List_fromArray(
+											[model.s]),
 										_List_fromArray(
 											[
 												$mdgriffith$elm_ui$Element$text($author$project$View$vw)
@@ -12613,7 +12639,9 @@ var $author$project$View$vag = function (model) {
 									[
 										$author$project$View$ff(
 										$author$project$View$fd(1)),
-										$author$project$View$vap
+										$author$project$View$vap,
+										model.q,
+										model.r
 									]),
 								$author$project$View$vad)
 							])),
@@ -12676,7 +12704,8 @@ var $author$project$View$vah = function (model) {
 									[
 										A2(
 										$mdgriffith$elm_ui$Element$paragraph,
-										_List_Nil,
+										_List_fromArray(
+											[model.v]),
 										_List_fromArray(
 											[
 												$mdgriffith$elm_ui$Element$text($author$project$View$vx)
@@ -12696,7 +12725,9 @@ var $author$project$View$vah = function (model) {
 									[
 										$author$project$View$ff(
 										$author$project$View$fd(1)),
-										$author$project$View$vap
+										$author$project$View$vap,
+										model.t,
+										model.u
 									]),
 								$author$project$View$vad)
 							])),
@@ -12759,7 +12790,8 @@ var $author$project$View$vai = function (model) {
 									[
 										A2(
 										$mdgriffith$elm_ui$Element$paragraph,
-										_List_Nil,
+										_List_fromArray(
+											[model.y]),
 										_List_fromArray(
 											[
 												$mdgriffith$elm_ui$Element$text($author$project$View$vy)
@@ -12779,7 +12811,9 @@ var $author$project$View$vai = function (model) {
 									[
 										$author$project$View$ff(
 										$author$project$View$fd(1)),
-										$author$project$View$vap
+										$author$project$View$vap,
+										model.w,
+										model.x
 									]),
 								$author$project$View$vad)
 							])),

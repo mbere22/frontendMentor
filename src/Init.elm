@@ -67,9 +67,23 @@ fl = \a -> E.text a
 fm = \a -> E.spacing a 
 fn = \a -> Ef.size a
 
-init = {a = E.text vv, b = vaq, c = vam, d = vam, e = vam, f=vam, g=vam, h=mac, i=maa, j =mab, k = mad }
+init = {a = E.text vv, b = vaq, c = vam, d = vam, e = vam, f=vam, g=vam, h=mac, i=maa, j =mab, k = mad, l = mae, m = maf, n= mag, o=mah, p=mai, q=mac,r=mad,s=maf, t=mac, u=mad,v=maf,w=mac,x=mad,y=maf }
 
 maa = E.rotate(pi)
 mab = E.moveLeft(turns(4))
 mac = E.rotate(2*pi)
 mad = E.moveLeft(turns(0))
+mae = Ef.extraBold
+maf = Ef.regular
+mag = mac
+mah = mad
+mai = maf
+maj = mac
+mak = mad
+mal = maf 
+mam = mac
+man = mad
+mao = maf
+map = mac
+maq = mad
+mar = maf 

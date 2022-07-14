@@ -28,7 +28,7 @@ vl = {angle = pi, steps = [vd, ve]} --view background gradient color
 vm = fb 255 255 255
 vn = E.centerX
 vo = E.centerY
-vp = E.html <| I.a
+vp = E.html <| I.f
 vq = E.clip 
 vr = E.fill
 vs = E.html <| I.b
@@ -54,6 +54,7 @@ vam = E.none
 vao = E.spacing
 vap = E.alignTop
 vaq = E.text "No more than 2GB. All files in your account must fit your allotted storage space."
+var = E.html <| I.f
 
 --FUNCTIONS
 fa = \a -> Eb.color a  --set color to background
@@ -79,10 +80,10 @@ type Event = Clickedc | Clickedd | Clickedg | Clickedf | Clickede
 view model = E.layout [fc vl] <| body model
 body model= E.column [fa vm, vn, vo, fe <| fg 450, ff <| fg 950, fh 24] [uno model]
 uno model = E.row [ff vr, fe vr] [unoa, unob model] 
-unoa = E.column [ff vr, fe vr, E.inFront unoab, E.inFront unoac][unoaa] 
+unoa = E.column [x, ff vr, fe vr, E.clip][unoaa] 
 unob model = E.column [ff vr, fe vr][unoba, unobb model]
 unoba = E.column [ff vr, fe vr, fe <| fd 1] [E.el [fn 30, vo, vab, vac] <| fl vz] 
 unobb model = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [vae model, vaf model, vag model, vah model, vai model]
-unoaa = E.el [ff vr, fe vr] vp
+unoaa = E.column [ff vr, fe vr, E.clip] [E.el [ff vr, fe vr, E.moveLeft 600, E.moveUp 300] vp] 
 unoab = E.el [ff vr, fe vr] vs
 unoac = E.el [ff vr, fe vr] vt 

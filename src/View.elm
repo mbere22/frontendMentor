@@ -32,7 +32,7 @@ vp = E.html <| I.f
 vq = E.clip 
 vr = E.fill
 vs = E.html <| I.g
-vt = E.html <| I.c 
+vt = E.html <| I.h
 vu = "How many team members can I invite?"
 vv = "What is the maximum file upload size?"
 vw = "How do I reset my password?"
@@ -77,13 +77,13 @@ fn = \a -> Ef.size a
 
 type Event = Clickedc | Clickedd | Clickedg | Clickedf | Clickede
 
-view model = E.layout [fc vl] <| body model
+view model = E.layout [fc vl]<| body model
 body model= E.column [fa vm, vn, vo, fe <| fg 450, ff <| fg 950, fh 24] [uno model]
-uno model = E.row [ff vr, fe vr] [unoa, unob model] 
+uno model = E.row [ff vr, fe vr, E.inFront(unoac)] [unoa, unob model] 
 unoa = E.column [ff vr, fe vr, E.clip, E.inFront(unoab)][unoaa] 
 unob model = E.column [ff vr, fe vr][unoba, unobb model]
 unoba = E.column [ff vr, fe vr, fe <| fd 1] [E.el [fn 30, vo, vab, vac] <| fl vz] 
 unobb model = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [vae model, vaf model, vag model, vah model, vai model]
-unoaa = E.column [ff vr, fe vr, E.clip] [E.el [ff vr, fe vr, E.moveLeft 600, E.moveUp 300] vp] 
-unoab = E.el [ff vr, fe vr, E.moveLeft 105] vs
-unoac = E.el [ff vr, fe vr] vt 
+unoaa = E.column [ff vr, fe vr, E.clip, E.inFront(unoac)] [E.el [E.moveLeft 580, E.moveUp 300] vp] 
+unoab = E.el [E.moveLeft 85] vs
+unoac = E.el [E.moveDown 135, E.moveLeft 95] vt 

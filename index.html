@@ -11050,6 +11050,23 @@ var $mdgriffith$elm_ui$Element$Border$rounded = function (radius) {
 var $author$project$View$fh = function (a) {
 	return $mdgriffith$elm_ui$Element$Border$rounded(a);
 };
+var $mdgriffith$elm_ui$Internal$Model$InFront = {$: 'InFront'};
+var $mdgriffith$elm_ui$Internal$Model$Nearby = F2(
+	function (a, b) {
+		return {$: 'Nearby', a: a, b: b};
+	});
+var $mdgriffith$elm_ui$Internal$Model$NoAttribute = {$: 'NoAttribute'};
+var $mdgriffith$elm_ui$Element$createNearby = F2(
+	function (loc, element) {
+		if (element.$ === 'Empty') {
+			return $mdgriffith$elm_ui$Internal$Model$NoAttribute;
+		} else {
+			return A2($mdgriffith$elm_ui$Internal$Model$Nearby, loc, element);
+		}
+	});
+var $mdgriffith$elm_ui$Element$inFront = function (element) {
+	return A2($mdgriffith$elm_ui$Element$createNearby, $mdgriffith$elm_ui$Internal$Model$InFront, element);
+};
 var $mdgriffith$elm_ui$Internal$Model$AsRow = {$: 'AsRow'};
 var $mdgriffith$elm_ui$Internal$Model$asRow = $mdgriffith$elm_ui$Internal$Model$AsRow;
 var $mdgriffith$elm_ui$Element$row = F2(
@@ -11072,23 +11089,6 @@ var $mdgriffith$elm_ui$Element$row = F2(
 	});
 var $mdgriffith$elm_ui$Internal$Flag$overflow = $mdgriffith$elm_ui$Internal$Flag$flag(20);
 var $mdgriffith$elm_ui$Element$clip = A2($mdgriffith$elm_ui$Internal$Model$Class, $mdgriffith$elm_ui$Internal$Flag$overflow, $mdgriffith$elm_ui$Internal$Style$classes.clip);
-var $mdgriffith$elm_ui$Internal$Model$InFront = {$: 'InFront'};
-var $mdgriffith$elm_ui$Internal$Model$Nearby = F2(
-	function (a, b) {
-		return {$: 'Nearby', a: a, b: b};
-	});
-var $mdgriffith$elm_ui$Internal$Model$NoAttribute = {$: 'NoAttribute'};
-var $mdgriffith$elm_ui$Element$createNearby = F2(
-	function (loc, element) {
-		if (element.$ === 'Empty') {
-			return $mdgriffith$elm_ui$Internal$Model$NoAttribute;
-		} else {
-			return A2($mdgriffith$elm_ui$Internal$Model$Nearby, loc, element);
-		}
-	});
-var $mdgriffith$elm_ui$Element$inFront = function (element) {
-	return A2($mdgriffith$elm_ui$Element$createNearby, $mdgriffith$elm_ui$Internal$Model$InFront, element);
-};
 var $mdgriffith$elm_ui$Element$el = F2(
 	function (attrs, child) {
 		return A4(
@@ -11116,17 +11116,199 @@ var $mdgriffith$elm_ui$Element$moveUp = function (y) {
 		$mdgriffith$elm_ui$Internal$Flag$moveY,
 		$mdgriffith$elm_ui$Internal$Model$MoveY(-y));
 };
+var $mdgriffith$elm_ui$Element$moveDown = function (y) {
+	return A2(
+		$mdgriffith$elm_ui$Internal$Model$TransformComponent,
+		$mdgriffith$elm_ui$Internal$Flag$moveY,
+		$mdgriffith$elm_ui$Internal$Model$MoveY(y));
+};
 var $elm$svg$Svg$Attributes$d = _VirtualDom_attribute('d');
+var $elm$svg$Svg$trustedNode = _VirtualDom_nodeNS('http://www.w3.org/2000/svg');
+var $elm$svg$Svg$defs = $elm$svg$Svg$trustedNode('defs');
+var $elm$svg$Svg$Attributes$dy = _VirtualDom_attribute('dy');
+var $elm$svg$Svg$feColorMatrix = $elm$svg$Svg$trustedNode('feColorMatrix');
+var $elm$svg$Svg$feGaussianBlur = $elm$svg$Svg$trustedNode('feGaussianBlur');
+var $elm$svg$Svg$feOffset = $elm$svg$Svg$trustedNode('feOffset');
 var $elm$svg$Svg$Attributes$fill = _VirtualDom_attribute('fill');
 var $elm$svg$Svg$Attributes$fillRule = _VirtualDom_attribute('fill-rule');
-var $elm$svg$Svg$trustedNode = _VirtualDom_nodeNS('http://www.w3.org/2000/svg');
+var $elm$svg$Svg$filter = $elm$svg$Svg$trustedNode('filter');
+var $elm$svg$Svg$Attributes$filter = _VirtualDom_attribute('filter');
+var $elm$svg$Svg$Attributes$filterUnits = _VirtualDom_attribute('filterUnits');
 var $elm$svg$Svg$g = $elm$svg$Svg$trustedNode('g');
 var $elm$svg$Svg$Attributes$height = _VirtualDom_attribute('height');
-var $elm$svg$Svg$Attributes$opacity = _VirtualDom_attribute('opacity');
+var $elm$svg$Svg$Attributes$id = _VirtualDom_attribute('id');
+var $elm$svg$Svg$Attributes$in_ = _VirtualDom_attribute('in');
 var $elm$svg$Svg$path = $elm$svg$Svg$trustedNode('path');
-var $elm$svg$Svg$Attributes$stroke = _VirtualDom_attribute('stroke');
+var $elm$svg$Svg$Attributes$result = _VirtualDom_attribute('result');
+var $elm$svg$Svg$Attributes$stdDeviation = _VirtualDom_attribute('stdDeviation');
 var $elm$svg$Svg$svg = $elm$svg$Svg$trustedNode('svg');
+var $elm$svg$Svg$Attributes$transform = _VirtualDom_attribute('transform');
+var $elm$svg$Svg$use = $elm$svg$Svg$trustedNode('use');
+var $elm$svg$Svg$Attributes$values = function (value) {
+	return A2(
+		_VirtualDom_attribute,
+		'values',
+		_VirtualDom_noJavaScriptUri(value));
+};
 var $elm$svg$Svg$Attributes$width = _VirtualDom_attribute('width');
+var $elm$svg$Svg$Attributes$x = _VirtualDom_attribute('x');
+var $elm$svg$Svg$Attributes$xlinkHref = function (value) {
+	return A3(
+		_VirtualDom_attributeNS,
+		'http://www.w3.org/1999/xlink',
+		'xlink:href',
+		_VirtualDom_noJavaScriptUri(value));
+};
+var $elm$svg$Svg$Attributes$y = _VirtualDom_attribute('y');
+var $author$project$Icon$h = A2(
+	$elm$svg$Svg$svg,
+	_List_fromArray(
+		[
+			$elm$svg$Svg$Attributes$width('191'),
+			$elm$svg$Svg$Attributes$height('184')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			$elm$svg$Svg$defs,
+			_List_Nil,
+			_List_fromArray(
+				[
+					A2(
+					$elm$svg$Svg$filter,
+					_List_fromArray(
+						[
+							$elm$svg$Svg$Attributes$x('-97.9%'),
+							$elm$svg$Svg$Attributes$y('-76.3%'),
+							$elm$svg$Svg$Attributes$width('295.8%'),
+							$elm$svg$Svg$Attributes$height('313.7%'),
+							$elm$svg$Svg$Attributes$filterUnits('objectBoundingBox'),
+							$elm$svg$Svg$Attributes$id('a')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$elm$svg$Svg$feOffset,
+							_List_fromArray(
+								[
+									$elm$svg$Svg$Attributes$dy('25'),
+									$elm$svg$Svg$Attributes$in_('SourceAlpha'),
+									$elm$svg$Svg$Attributes$result('shadowOffsetOuter1')
+								]),
+							_List_Nil),
+							A2(
+							$elm$svg$Svg$feGaussianBlur,
+							_List_fromArray(
+								[
+									$elm$svg$Svg$Attributes$stdDeviation('25'),
+									$elm$svg$Svg$Attributes$in_('shadowOffsetOuter1'),
+									$elm$svg$Svg$Attributes$result('shadowBlurOuter1')
+								]),
+							_List_Nil),
+							A2(
+							$elm$svg$Svg$feColorMatrix,
+							_List_fromArray(
+								[
+									$elm$svg$Svg$Attributes$values('0 0 0 0 0.209139076 0 0 0 0 0.0691446444 0 0 0 0 0.478091033 0 0 0 0.497159091 0'),
+									$elm$svg$Svg$Attributes$in_('shadowBlurOuter1')
+								]),
+							_List_Nil)
+						])),
+					A2(
+					$elm$svg$Svg$path,
+					_List_fromArray(
+						[
+							$elm$svg$Svg$Attributes$id('b'),
+							$elm$svg$Svg$Attributes$d('M0 27.756v53.87l41.968 24.035 47.387-28.025v-53.87')
+						]),
+					_List_Nil)
+				])),
+			A2(
+			$elm$svg$Svg$g,
+			_List_fromArray(
+				[
+					$elm$svg$Svg$Attributes$fill('none'),
+					$elm$svg$Svg$Attributes$fillRule('evenodd')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$svg$Svg$g,
+					_List_fromArray(
+						[
+							$elm$svg$Svg$Attributes$transform('translate(50.93 2.125)')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$elm$svg$Svg$use,
+							_List_fromArray(
+								[
+									$elm$svg$Svg$Attributes$fill('#000'),
+									$elm$svg$Svg$Attributes$filter('url(#a)'),
+									$elm$svg$Svg$Attributes$xlinkHref('#b')
+								]),
+							_List_Nil),
+							A2(
+							$elm$svg$Svg$use,
+							_List_fromArray(
+								[
+									$elm$svg$Svg$Attributes$fill('#FF9271'),
+									$elm$svg$Svg$Attributes$xlinkHref('#b')
+								]),
+							_List_Nil)
+						])),
+					A2(
+					$elm$svg$Svg$path,
+					_List_fromArray(
+						[
+							$elm$svg$Svg$Attributes$fill('#DF5C34'),
+							$elm$svg$Svg$Attributes$fillRule('nonzero'),
+							$elm$svg$Svg$Attributes$d('M92.899 53.917v53.87l47.387-28.026v-53.87z')
+						]),
+					_List_Nil),
+					A2(
+					$elm$svg$Svg$path,
+					_List_fromArray(
+						[
+							$elm$svg$Svg$Attributes$fill('#F47B56'),
+							$elm$svg$Svg$Attributes$fillRule('nonzero'),
+							$elm$svg$Svg$Attributes$d('M50.93 29.88L99.624 2.126l40.662 23.767-47.387 28.025z')
+						]),
+					_List_Nil),
+					A2(
+					$elm$svg$Svg$path,
+					_List_fromArray(
+						[
+							$elm$svg$Svg$Attributes$d('M94.013 14.49a25.942 25.942 0 0114.207 3.129c2.486 1.462 3.844 2.988 4.036 4.579.192 1.59-.628 2.975-2.562 4.143a9.115 9.115 0 01-2.985 1.18c-.869.205-1.76.295-2.652.269l-.974-.077c.091.217.151.446.18.68a3.132 3.132 0 01-.513 1.552 5.704 5.704 0 01-2.1 2.065 12.633 12.633 0 01-6.7 1.77 13.247 13.247 0 01-6.957-1.757c-1.999-1.18-3.023-2.566-3.1-4.156a4.49 4.49 0 012.562-4.015 8.488 8.488 0 012.357-1.013 9.175 9.175 0 012.037-.346h.705l-1.282-.77 3.6-2.244 8.34 4.912a4.377 4.377 0 004.15 0c1.769-1.103 1.137-2.552-1.895-4.348a19.261 19.261 0 00-10.556-2.347 21.67 21.67 0 00-11.018 3.168c-3.023 1.89-4.522 4.143-4.496 6.76 0 2.564 1.601 4.848 4.714 6.682a21.015 21.015 0 0011.146 2.655 20.926 20.926 0 0011.017-2.925 12.353 12.353 0 003.062-2.565 5.683 5.683 0 001.28-2.18l.18-.808 4.753.269c.008.145.008.29 0 .436a8.216 8.216 0 01-.346 1.154 8.303 8.303 0 01-.82 1.72 11.912 11.912 0 01-1.69 2 15.952 15.952 0 01-2.755 2.13 25.602 25.602 0 01-9.326 3.36 35.176 35.176 0 01-10.877.192 24.896 24.896 0 01-9.339-3.053 12.127 12.127 0 01-5.304-5.566 8.192 8.192 0 010-6.593 12.692 12.692 0 015.266-5.759 28.966 28.966 0 0114.655-4.284zm4.663 13.262c-.17-.891-.77-1.64-1.601-2.001a6.579 6.579 0 00-3.33-.911 5.619 5.619 0 00-3.101.795 2.283 2.283 0 00-1.281 2.001c.117.89.69 1.654 1.512 2.014a6.54 6.54 0 003.394.86 6.092 6.092 0 003.254-.847 2.065 2.065 0 001.205-1.911'),
+							$elm$svg$Svg$Attributes$fill('#3E2928'),
+							$elm$svg$Svg$Attributes$fillRule('nonzero')
+						]),
+					_List_Nil)
+				]))
+		]));
+var $elm$core$Basics$always = F2(
+	function (a, _v0) {
+		return a;
+	});
+var $elm$core$Basics$composeL = F3(
+	function (g, f, x) {
+		return g(
+			f(x));
+	});
+var $mdgriffith$elm_ui$Internal$Model$unstyled = A2($elm$core$Basics$composeL, $mdgriffith$elm_ui$Internal$Model$Unstyled, $elm$core$Basics$always);
+var $mdgriffith$elm_ui$Element$html = $mdgriffith$elm_ui$Internal$Model$unstyled;
+var $author$project$View$vt = $mdgriffith$elm_ui$Element$html($author$project$Icon$h);
+var $author$project$View$unoac = A2(
+	$mdgriffith$elm_ui$Element$el,
+	_List_fromArray(
+		[
+			$mdgriffith$elm_ui$Element$moveDown(135),
+			$mdgriffith$elm_ui$Element$moveLeft(95)
+		]),
+	$author$project$View$vt);
+var $elm$svg$Svg$Attributes$opacity = _VirtualDom_attribute('opacity');
+var $elm$svg$Svg$Attributes$stroke = _VirtualDom_attribute('stroke');
 var $author$project$Icon$f = A2(
 	$elm$svg$Svg$svg,
 	_List_fromArray(
@@ -11172,17 +11354,6 @@ var $author$project$Icon$f = A2(
 					_List_Nil)
 				]))
 		]));
-var $elm$core$Basics$always = F2(
-	function (a, _v0) {
-		return a;
-	});
-var $elm$core$Basics$composeL = F3(
-	function (g, f, x) {
-		return g(
-			f(x));
-	});
-var $mdgriffith$elm_ui$Internal$Model$unstyled = A2($elm$core$Basics$composeL, $mdgriffith$elm_ui$Internal$Model$Unstyled, $elm$core$Basics$always);
-var $mdgriffith$elm_ui$Element$html = $mdgriffith$elm_ui$Internal$Model$unstyled;
 var $author$project$View$vp = $mdgriffith$elm_ui$Element$html($author$project$Icon$f);
 var $mdgriffith$elm_ui$Internal$Model$Fill = function (a) {
 	return {$: 'Fill', a: a};
@@ -11195,7 +11366,8 @@ var $author$project$View$unoaa = A2(
 		[
 			$author$project$View$ff($author$project$View$vr),
 			$author$project$View$fe($author$project$View$vr),
-			$mdgriffith$elm_ui$Element$clip
+			$mdgriffith$elm_ui$Element$clip,
+			$mdgriffith$elm_ui$Element$inFront($author$project$View$unoac)
 		]),
 	_List_fromArray(
 		[
@@ -11203,18 +11375,14 @@ var $author$project$View$unoaa = A2(
 			$mdgriffith$elm_ui$Element$el,
 			_List_fromArray(
 				[
-					$author$project$View$ff($author$project$View$vr),
-					$author$project$View$fe($author$project$View$vr),
-					$mdgriffith$elm_ui$Element$moveLeft(600),
+					$mdgriffith$elm_ui$Element$moveLeft(580),
 					$mdgriffith$elm_ui$Element$moveUp(300)
 				]),
 			$author$project$View$vp)
 		]));
 var $elm$svg$Svg$Attributes$cx = _VirtualDom_attribute('cx');
 var $elm$svg$Svg$Attributes$cy = _VirtualDom_attribute('cy');
-var $elm$svg$Svg$defs = $elm$svg$Svg$trustedNode('defs');
 var $elm$svg$Svg$ellipse = $elm$svg$Svg$trustedNode('ellipse');
-var $elm$svg$Svg$Attributes$id = _VirtualDom_attribute('id');
 var $elm$svg$Svg$linearGradient = $elm$svg$Svg$trustedNode('linearGradient');
 var $elm$svg$Svg$Attributes$offset = _VirtualDom_attribute('offset');
 var $elm$svg$Svg$Attributes$rx = _VirtualDom_attribute('rx');
@@ -11223,7 +11391,6 @@ var $elm$svg$Svg$stop = $elm$svg$Svg$trustedNode('stop');
 var $elm$svg$Svg$Attributes$stopColor = _VirtualDom_attribute('stop-color');
 var $elm$svg$Svg$Attributes$stopOpacity = _VirtualDom_attribute('stop-opacity');
 var $elm$svg$Svg$Attributes$style = _VirtualDom_attribute('style');
-var $elm$svg$Svg$Attributes$transform = _VirtualDom_attribute('transform');
 var $elm$svg$Svg$Attributes$x1 = _VirtualDom_attribute('x1');
 var $elm$svg$Svg$Attributes$x2 = _VirtualDom_attribute('x2');
 var $elm$svg$Svg$Attributes$y1 = _VirtualDom_attribute('y1');
@@ -11776,9 +11943,7 @@ var $author$project$View$unoab = A2(
 	$mdgriffith$elm_ui$Element$el,
 	_List_fromArray(
 		[
-			$author$project$View$ff($author$project$View$vr),
-			$author$project$View$fe($author$project$View$vr),
-			$mdgriffith$elm_ui$Element$moveLeft(105)
+			$mdgriffith$elm_ui$Element$moveLeft(85)
 		]),
 	$author$project$View$vs);
 var $author$project$View$unoa = A2(
@@ -12746,7 +12911,8 @@ var $author$project$View$uno = function (model) {
 		_List_fromArray(
 			[
 				$author$project$View$ff($author$project$View$vr),
-				$author$project$View$fe($author$project$View$vr)
+				$author$project$View$fe($author$project$View$vr),
+				$mdgriffith$elm_ui$Element$inFront($author$project$View$unoac)
 			]),
 		_List_fromArray(
 			[

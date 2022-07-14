@@ -77,7 +77,10 @@ fn = \a -> Ef.size a
 
 type Event = Clickedc | Clickedd | Clickedg | Clickedf | Clickede
 
-view model = E.layout [fc vl]<| body model
+view model = E.layoutWith {options = [E.focusStyle{ borderColor = Nothing
+                    , backgroundColor = Nothing
+                    , shadow = Nothing
+                    }]} [fc vl]<| body model
 body model= E.column [fa vm, vn, vo, fe <| fg 450, ff <| fg 950, fh 24] [uno model]
 uno model = E.row [ff vr, fe vr, E.inFront(unoac)] [unoa, unob model] 
 unoa = E.column [ff vr, fe vr, E.clip, E.inFront(unoab)][unoaa] 

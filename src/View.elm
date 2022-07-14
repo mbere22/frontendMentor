@@ -89,5 +89,5 @@ unoba = E.column [ff vr, fe vr, fe <| fd 7] [E.el [fn 30, vo, vab, vac] <| fl vz
 unobb model = E.column [ff vr, fe vr, fm 20, fe <| fd 9] [vae model, vaf model, vag model, vah model, vai model]
 unobc = E.column [ff vr, fe vr, fm 20, fe <| fd 3] [E.none]
 unoaa = E.column [ff vr, fe vr, E.clip, E.inFront(unoac)] [E.el [E.moveLeft 580, E.moveUp 300] vp] 
-unoab = E.el [E.moveLeft 85] vs
-unoac = E.el [E.moveDown 135, E.moveLeft 95] vt 
+unoab = E.el [E.moveLeft 85, E.moveDown 50] vs
+unoac = E.el [E.moveDown 185, E.moveLeft 95] vt 

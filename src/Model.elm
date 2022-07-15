@@ -1,6 +1,5 @@
 module Model exposing (init, update)
 
-import Test as T
 import View as V
 import Init as I
 

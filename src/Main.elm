@@ -2,7 +2,6 @@ module Main exposing (main)
 
 import Browser as B
 import Model as M
-import Test as T
 import View as V
 
 
